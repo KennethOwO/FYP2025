@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test InputField should render correctly 1`] = `
+<div
+  className="form-group is-invalid"
+>
+  <input
+    className="form-control is-invalid"
+    data-testid="test"
+    name="test"
+    onChange={[MockFunction]}
+    placeholder=" "
+    type="text"
+    value=""
+  />
+  <label
+    className="input-label "
+  >
+    Test Label
+  </label>
+  <div
+    className="form-error is-invalid"
+  >
+    Test Error Message
+  </div>
+</div>
+`;

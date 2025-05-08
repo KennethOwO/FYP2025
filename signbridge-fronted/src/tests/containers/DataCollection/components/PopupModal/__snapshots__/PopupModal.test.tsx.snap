@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test PopupModal should render correctly 1`] = `
+<div
+  className="popup-modal open modal-dialog-centered modal-lg"
+>
+  <img
+    alt=""
+    className="popup-tick img-fluid"
+    src="default"
+  />
+  <div
+    className="modal-content"
+  >
+    <h2
+      className="modal-title"
+    >
+      insThankYou
+    </h2>
+    <p
+      className="modal-body"
+    >
+      insProceedDetails
+    </p>
+    <button
+      className="btn btn-success"
+      onClick={[Function]}
+    >
+      OK
+    </button>
+  </div>
+</div>
+`;

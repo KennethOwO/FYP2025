@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ForgotPassword should render correctly 1`] = `
+<div
+  className="sign-up-container"
+>
+  <h1>
+    Forgot Password
+  </h1>
+  <div
+    className="sign-up-form"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="login-form-group "
+      >
+        <input
+          onChange={[Function]}
+          placeholder=""
+          type="email"
+          value=""
+        />
+        <label
+          className="login-form-label"
+          htmlFor="inp"
+        >
+          Email
+        </label>
+      </div>
+      <button
+        className="sign-up-btn"
+        disabled={false}
+        type="submit"
+      >
+        Reset Password
+      </button>
+    </form>
+  </div>
+</div>
+`;

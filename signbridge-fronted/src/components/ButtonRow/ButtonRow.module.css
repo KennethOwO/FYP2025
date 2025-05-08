@@ -1,0 +1,124 @@
+.buttonRow {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+/* Common styles for all FA icons */
+.faStopBtn,
+.faPlayPause,
+.faTrash {
+    font-size: 2vw !important;
+    color: #ffffff;
+    border-radius: 15%;
+    padding: 10px;
+    width: 3vw; /* Fixed width */
+    height: 3vw; /* Fixed height */
+    display: flex; /* Flex to center the icon */
+    align-items: center; /* Vertically center the icon */
+    justify-content: center; /* Horizontally center the icon */
+}
+
+.faPlayPause:hover {
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.8), -0.125rem -0.125rem 1rem rgba(299, 42, 42, 0.8), 0.125rem 0.125rem 1rem rgba(198, 159, 159, 0.8);
+}
+
+/* Specific colors for each icon */
+.faPlayPause {
+    background-color: #ff4d4d;
+}
+
+.faTrash {
+    background-color: #2ecc71;
+}
+
+.fa-microphone {
+    background-color: #261474;
+}
+
+/* Hover effect for the trash icon */
+.faTrash:hover {
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.8), -0.125rem -0.125rem 1rem rgba(50, 154, 107, 0.8), 0.125rem 0.125rem 1rem rgba(117, 209, 148, 0.8);
+}
+
+/* Custom class for trash icon */
+.faTrash {
+    background-color: #2ecc71;
+}
+
+.avatarpauseBtn,
+.avatarclearBtn {
+    font-size: 1vw;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnText {
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    .buttonRow {
+        width: 90%;
+    }
+
+    .avatarclearBtn {
+        font-size: 15px;
+    }
+
+    .avatarpauseBtn {
+        font-size: 15px;
+    }
+
+    .faStopBtn,
+    .faPlayPause,
+    .faTrash {
+        font-size: 25px !important;
+        border-radius: 15%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .buttonRow {
+        width: 90%;
+    }
+
+    .avatarclearBtn {
+        font-size: 15px;
+    }
+
+    .avatarpauseBtn {
+        font-size: 15px;
+    }
+
+    .faStopBtn,
+    .faPlayPause,
+    .faTrash {
+        font-size: 25px !important;
+        border-radius: 15%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .faStopBtn,
+    .faPlayPause,
+    .faTrash {
+        font-size: 23px !important;
+        border-radius: 15%;
+        padding: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}

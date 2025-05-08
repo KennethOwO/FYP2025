@@ -1,0 +1,175 @@
+.setting-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.setting-content {
+    background-color: #4c4e4d;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+}
+
+.setting-content h3 {
+    font-family: "Russo One", sans-serif;
+    background-color: #4c4e4d;
+    padding: 20px 20px 10px 20px;
+    color: #f4f4f4;
+    text-align: center;
+    font-size: 1.9em;
+}
+
+.setting-details {
+    background-color: #ecedec;
+    border: 8px solid #4c4e4d;
+    border-radius: 20px;
+    width: 500px;
+    height: 160px;
+    padding: 20px;
+}
+
+.setting-details p {
+    margin: 20px 0;
+}
+
+.setting-content p {
+    font-family: "Russo One", sans-serif;
+    padding: 0 40px;
+    font-size: 20px;
+}
+
+/* Volumn Slider */
+.volume-title {
+    font-family: "Russo One", sans-serif;
+    font-size: 20px;
+}
+
+.slider-value-label {
+    color: black;
+    display: inline-block !important;
+    font-size: 22px !important;
+    margin-top: 7px !important;
+    text-align: center;
+    width: 100%;
+}
+
+.noUi-handle {
+    border: none !important;
+    border-radius: 0 !important;
+    background: url("https://raw.githubusercontent.com/cromartie1984/diablo3-project/master/ScrollButton.png") !important;
+    background-position: left top !important;
+    box-shadow: none !important;
+}
+
+.noUi-handle:focus {
+    outline: none !important;
+}
+
+.noUi-handle:hover {
+    background-position: left center !important;
+}
+
+.noUi-handle:active {
+    background-position: left bottom !important;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 25px !important;
+    height: 35px !important;
+    top: -12px !important;
+    cursor: pointer;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+    background: none !important;
+}
+
+.noUi-connect {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: #f1793c !important;
+    background: -moz-radial-gradient(center, ellipse cover, #f1793c 0%, #cb5e26 50%, #792f14 100%) !important;
+    background: -webkit-radial-gradient(center, ellipse cover, #f1793c 0%, #cb5e26 50%, #792f14 100%) !important;
+    background: radial-gradient(ellipse at center, #f1793c 0%, #cb5e26 50%, #792f14 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(
+		startColorstr="#f1793c",
+		endColorstr="#792f14",
+		GradientType=1
+    ) !important;
+}
+
+.noUi-target {
+    box-shadow: none !important;
+    width: 85% !important;
+    height: 20px !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: none !important;
+    border-style: solid !important;
+    border-width: 5px 4px 5px 4px !important;
+    -moz-border-image: url("https://raw.githubusercontent.com/cromartie1984/diablo3-project/master/SliderBar.png") 5 4 5 4 fill stretch repeat !important;
+    -webkit-border-image: url("https://raw.githubusercontent.com/cromartie1984/diablo3-project/master/SliderBar.png") 5 4 5 4 fill stretch repeat !important;
+    -o-border-image: url("https://raw.githubusercontent.com/cromartie1984/diablo3-project/master/SliderBar.png") 5 4 5 4 fill stretch repeat !important;
+    border-image: url("https://raw.githubusercontent.com/cromartie1984/diablo3-project/master/SliderBar.png") 5 4 5 4 fill stretch repeat !important;
+}
+
+.slider-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.fa-close-btn {
+    font-size: 22px;
+}
+
+.fa-volume-down {
+    padding-right: 10px;
+}
+
+.volume-icon-setting {
+    padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .setting-details {
+        width: 100%;
+        height: auto;
+    }
+
+    .setting-content {
+        max-width: 90%;
+        width: 90%;
+    }
+
+    .setting-content p {
+        padding: 0 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .setting-details {
+        width: 100%;
+    }
+
+    .setting-content {
+        max-width: 90%;
+        width: 90%;
+    }
+
+    .setting-content p {
+        padding: 0 10px;
+        font-size: 0.9em;
+    }
+}

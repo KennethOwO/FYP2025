@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test HomepageSection should render correctly 1`] = `
+<div>
+  <div
+    className="slider-container"
+  >
+    <div
+      className="slider"
+    >
+      <img
+        alt="First Slide"
+        className="slider-image"
+        src="./images/image-slider/SignBridgeBanner1.png"
+      />
+      <div
+        className="dot-container"
+      >
+        <span
+          className="dot active"
+          onClick={[Function]}
+        />
+        <span
+          className="dot "
+          onClick={[Function]}
+        />
+        <span
+          className="dot "
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+  </div>
+  <section
+    className="available-module-section"
+    id="available-module-section"
+  >
+    <h1
+      className="heading"
+      style={
+        {
+          "background": "#B7C1CA",
+        }
+      }
+    >
+      <span
+        style={
+          {
+            "color": "#77828F",
+          }
+        }
+      >
+        module
+      </span>
+       
+      available
+    </h1>
+    <div
+      className="available-module-container"
+    >
+      <div
+        className="avail-module-box"
+      >
+        <div
+          className="avail-module-image"
+        >
+          <img
+            alt="Library"
+            src="/images/available-module/library.png"
+          />
+          <div
+            className="avail-module-text"
+          >
+            <a
+              className="cart-btn"
+              href="/library"
+            >
+              library
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="avail-module-box"
+      >
+        <div
+          className="avail-module-image"
+        >
+          <img
+            alt="Communication"
+            src="/images/available-module/communication.png"
+          />
+          <div
+            className="avail-module-text"
+          >
+            <a
+              className="cart-btn"
+              href="/communication"
+            >
+              communication
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="avail-module-box"
+      >
+        <div
+          className="avail-module-image"
+        >
+          <img
+            alt="Education"
+            src="/images/available-module/education.png"
+          />
+          <div
+            className="avail-module-text"
+          >
+            <a
+              className="cart-btn"
+              href="/education"
+            >
+              education
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    className="about"
+    id="about"
+  >
+    <h1
+      className="heading"
+      style={
+        {
+          "background": "#B7C1CA",
+        }
+      }
+    >
+      about
+       
+      <span
+        style={
+          {
+            "color": "#77828F",
+          }
+        }
+      >
+        Neuon AI
+      </span>
+    </h1>
+    <div
+      className="row"
+    >
+      <div
+        className="video-container"
+      >
+        <img
+          alt="Company"
+          src="/images/company.png"
+        />
+      </div>
+      <div
+        className="content"
+      >
+        <p>
+          about_description1
+        </p>
+        <p>
+          about_description2
+        </p>
+      </div>
+    </div>
+  </section>
+  <section
+    className="youtube-video"
+  >
+    <h1
+      className="heading"
+      id="ytvideo"
+      style={
+        {
+          "background": "#B7C1CA",
+        }
+      }
+    >
+       
+      <span
+        style={
+          {
+            "color": "#77828F",
+          }
+        }
+      >
+         YouTube 
+      </span>
+       Video 
+    </h1>
+    <iframe
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      src="https://www.youtube.com/embed/JOgJXtbcdC0?si=Znzc4PlcHQBE_bbS"
+      title="YouTube video player"
+    />
+  </section>
+  <section
+    className="location"
+  >
+    <h1
+      className="heading"
+      id="gmap_canvas"
+      style={
+        {
+          "background": "#B7C1CA",
+        }
+      }
+    >
+      location
+    </h1>
+    <div
+      className="mapouter"
+    >
+      <div
+        className="gmap_canvas"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15953.835287675945!2d110.4059977!3d1.4957629!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31fba1332943cb13%3A0x9050a3791464b11a!2sNEUON%20AI!5e0!3m2!1sen!2smy!4v1710735767635!5m2!1sen!2smy"
+        />
+        <a
+          href="https://123movies-to.org"
+        />
+        <br />
+        <a
+          href="https://www.embedgooglemap.net"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

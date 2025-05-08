@@ -1,0 +1,186 @@
+.collapsibleContainer {
+    margin-bottom: 10px;
+    width: 85%;
+}
+
+.collapsibleContent {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: width 0.2s;
+    background-color: #fff;
+}
+
+.collapsibleContent.notOpened {
+    width: 85%;
+    cursor: pointer;
+}
+
+.collapsibleContent.notOpened:hover {
+    width: 100%;
+    background-color: rgb(224, 224, 224);
+}
+
+.collapsible-content.opened {
+    width: 85%;
+}
+
+.collapsibleHeader {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 15px;
+    background-color: #a4825e;
+    border-radius: 8px 8px 0 0;
+    font-size: 22px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.collapsibleHeader h2 {
+    font-size: clamp(22px, 2vw, 24px);
+    margin: 5px 0;
+}
+
+.expandIcon {
+    margin-left: 10px;
+}
+
+.collapsiblebox {
+    margin: 10px 20px 0 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.personalDetails h3,
+.ratings h3,
+.comments h3 {
+    width: 100%;
+    background-color: #dccec0;
+    padding: 10px;
+    margin: 0 auto 10px auto;
+    border-radius: 5px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.personalDetails,
+.ratings,
+.comments {
+    flex: 1;
+    margin: 0;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personalDetailsItem,
+.ratingsItem,
+.commentsItem {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    width: 90%;
+}
+
+.screenshotImage {
+    width: 50%;
+    height: auto;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .collapsibleContainer {
+        width: 95%;
+    }
+
+    .collapsibleContent.notOpened {
+        width: 95%;
+    }
+
+    .collapsiblebox {
+        margin: 10px 10px;
+        padding: 5px;
+    }
+
+    .personalDetailsItem,
+    .ratingsItem,
+    .commentsItem {
+        font-size: 16px;
+    }
+
+    .collapsibleHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .collapsibleHeader h2 {
+        font-size: 18px;
+        width: 100%;
+        margin: 2px 0;
+    }
+
+    .expandIcon {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .collapsiblebox {
+        margin: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .collapsibleContainer {
+        width: 95%;
+    }
+
+    .collapsibleContent.notOpened {
+        width: 95%;
+    }
+
+    .collapsibleHeader h2 {
+        font-size: 18px;
+    }
+
+    .collapsiblebox {
+        margin: 10px 10px;
+    }
+
+    .personalDetails,
+    .ratings,
+    .comments {
+        min-width: 200px;
+    }
+
+    .personalDetails h3,
+    .ratings h3,
+    .comments h3 {
+        font-size: 18px;
+        padding: 8px;
+        width: 90%;
+        margin: 0px auto 10px auto;
+    }
+
+    .personalDetailsItem,
+    .ratingsItem,
+    .commentsItem {
+        font-size: 14px;
+    }
+}

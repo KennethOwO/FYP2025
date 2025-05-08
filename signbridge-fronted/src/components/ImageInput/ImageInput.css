@@ -1,0 +1,49 @@
+.image-input-class {
+    display: flex;
+    align-items: center;
+}
+
+.image-input-class .ant-btn {
+    font-size: 18px;
+    height: 50px;
+    background-color: #cad7eb;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border: 0px solid #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.image-input-class .ant-btn:hover {
+    background-color: #ffffff !important;
+    color: #000 !important;
+}
+
+.image-input-class .ant-space {
+    margin-top: 8px;
+    margin-left: 20px;
+    max-width: 100%;
+    text-align: left;
+}
+
+.image-input-class .uploaded-text {
+    color: #0400FF;
+    font-size: 18px;
+}
+
+.image-input-class .ant-space span:hover svg path {
+    fill: red;
+}
+
+.image-input-class .ant-space .close-outline-button {
+    cursor: pointer
+}
+
+@media screen and (max-width: 768px) {
+    .image-input-class .ant-btn {
+        font-size: 16px; 
+        height: 40px; 
+    }
+
+    .image-input-class .uploaded-text {
+        font-size: 16px;
+    }
+}

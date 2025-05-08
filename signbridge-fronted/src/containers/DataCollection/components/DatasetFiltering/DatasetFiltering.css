@@ -1,0 +1,7 @@
+.dataset-filter-group {
+    display: flex;
+}
+
+.dataset-filter-item {
+    margin: 10px 5px;
+}

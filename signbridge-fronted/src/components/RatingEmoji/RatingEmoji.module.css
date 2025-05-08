@@ -1,0 +1,62 @@
+.rating_emojis svg {
+  fill: rgb(0, 0, 0);
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
+.super_happy,
+.happy,
+.neutral,
+.sad,
+.super_sad {
+  position: absolute;
+  opacity: 0;
+}
+
+input + svg {
+  cursor: pointer;
+}
+
+input[class="super_happy"]:hover + svg,
+input[class="super_happy"]:checked + svg,
+input[class="super_happy"]:focus + svg {
+  fill: rgb(0, 109, 217);
+}
+
+input[class="happy"]:hover + svg,
+input[class="happy"]:checked + svg,
+input[class="happy"]:focus + svg {
+  fill: rgb(0, 204, 79);
+}
+
+input[class="neutral"]:hover + svg,
+input[class="neutral"]:checked + svg,
+input[class="neutral"]:focus + svg {
+  fill: rgb(232, 214, 0);
+}
+
+input[class="sad"]:hover + svg,
+input[class="sad"]:checked + svg,
+input[class="sad"]:focus + svg {
+  fill: rgb(229, 132, 0);
+}
+
+input[class="super_sad"]:hover + svg,
+input[class="super_sad"]:checked + svg,
+input[class="super_sad"]:focus + svg {
+  fill: rgb(239, 42, 16);
+}
+
+
+@media screen and (max-width: 768px) {
+  .rating_emojis {
+    align-items: center;
+    margin-left: 0; 
+  }
+
+  .rating_emojis svg {
+    height: 2rem;
+    width: 2rem;
+    margin: 2px; 
+  }
+}

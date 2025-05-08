@@ -1,0 +1,586 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test DataCollectionPublic should render correctly 1`] = `
+<div>
+  <div>
+    <div
+      className="dataForm-bg"
+    >
+      <div
+        className="popup-confirmation "
+      >
+        <div
+          className="popup-confirmation-content-header"
+        >
+          <h2>
+            insAreYouSure
+          </h2>
+        </div>
+        <div
+          className="popup-confirmation-content"
+        >
+          <div
+            className="popup-confirmation-details"
+          >
+            <div
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-175ib4q-MuiPaper-root-MuiTableContainer-root"
+            >
+              <table
+                className="MuiTable-root css-rqglhn-MuiTable-root"
+                role={null}
+              >
+                <tbody
+                  className="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                  role={null}
+                >
+                  <tr
+                    className="MuiTableRow-root css-ys9ggv-MuiTableRow-root"
+                    role={null}
+                  >
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-r6fuq3-MuiTableCell-root"
+                    >
+                      <b>
+                        insName
+                      </b>
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3urw24-MuiTableCell-root"
+                    />
+                  </tr>
+                  <tr
+                    className="MuiTableRow-root css-2qi3sl-MuiTableRow-root"
+                    role={null}
+                  >
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-r6fuq3-MuiTableCell-root"
+                    >
+                      <b>
+                        insEmail
+                      </b>
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1vhc2pi-MuiTableCell-root"
+                    />
+                  </tr>
+                  <tr
+                    className="MuiTableRow-root css-ys9ggv-MuiTableRow-root"
+                    role={null}
+                  >
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-r6fuq3-MuiTableCell-root"
+                    >
+                      <b>
+                        insText
+                      </b>
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1vhc2pi-MuiTableCell-root"
+                    >
+                      Hello, World!
+                    </td>
+                  </tr>
+                  <tr
+                    className="MuiTableRow-root css-1yq2m0q-MuiTableRow-root"
+                    role={null}
+                  >
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-r6fuq3-MuiTableCell-root"
+                    >
+                      <b>
+                        insVideo
+                      </b>
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1vhc2pi-MuiTableCell-root"
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div
+            className="popup-confirmation-content-button"
+          >
+            <button
+              className="btn btn--reset btn--large"
+              data-testid="button-btn--reset"
+              onClick={[Function]}
+              type="button"
+            >
+              cancel_btn
+            </button>
+            <button
+              className="ant-btn css-dev-only-do-not-override-42nv3w ant-btn-default btn-submit btn-large"
+              data-testid="submit_btn2"
+              disabled={false}
+              onClick={[Function]}
+              style={
+                {
+                  "fontSize": "20px",
+                  "height": "auto",
+                  "position": "relative",
+                }
+              }
+              type="button"
+            >
+              <span>
+                submit_btn
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="undefined "
+      >
+        <div>
+          <h1>
+            instructions
+          </h1>
+          <i
+            className="undefined fa fa-close"
+            data-testid="click-close-btn"
+            onClick={[Function]}
+          />
+        </div>
+        <div>
+          <div>
+            <p>
+              <strong>
+                1.
+              </strong>
+               
+              inslogin
+            </p>
+            <p>
+              <strong>
+                2.
+              </strong>
+               
+              insFillDetails
+            </p>
+            <p>
+              <strong>
+                3.
+              </strong>
+               
+              insUploadDemoVideo
+            </p>
+            <p>
+              <strong>
+                4.
+              </strong>
+               
+              insResetBtn
+            </p>
+          </div>
+          <hr />
+          <div>
+            <p>
+              insNote
+            </p>
+            <div>
+              <ul>
+                <li>
+                  insVideoBg
+                </li>
+                <li>
+                  insVideoMp4
+                </li>
+                <li>
+                  insVideoBody
+                </li>
+                <li>
+                  insVideoPurpose
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p>
+              insReferImage
+            </p>
+            <div>
+              <img
+                alt="instruction-image"
+                src="default"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="dataForm"
+      >
+        <div
+          className="dataForm-header-container"
+        >
+          <div
+            className="dataForm-header"
+          >
+            <h1>
+              dataset_collection_form
+            </h1>
+            <p>
+              datasetmsg
+            </p>
+          </div>
+        </div>
+        <div
+          className="dataForm-cover"
+        >
+          <div
+            className="dataForm-card signexpert"
+          >
+            <h1>
+              in_touch
+            </h1>
+            <h3>
+              more_suggestions
+            </h3>
+            <div
+              className="dataForm-card-content"
+            >
+              <div
+                className="dataForm-card-info"
+              >
+                <svg
+                  fill="currentColor"
+                  height="2em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    {
+                      "color": "#000",
+                      "marginRight": "5px",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width="2em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 1.74.5 3.37 1.41 4.84.95 1.54 2.2 2.86 3.16 4.4.47.75.81 1.45 1.17 2.26.26.55.47 1.5 1.26 1.5s1-.95 1.25-1.5c.37-.81.7-1.51 1.17-2.26.96-1.53 2.21-2.85 3.16-4.4C18.5 12.37 19 10.74 19 9c0-3.87-3.13-7-7-7zm0 9.75a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"
+                  />
+                </svg>
+                <p>
+                   
+                  neoun_address
+                </p>
+              </div>
+              <div
+                className="dataForm-card-info2"
+              >
+                <svg
+                  fill="currentColor"
+                  height="2em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    {
+                      "color": "#000",
+                      "marginRight": "5px",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width="2em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  />
+                </svg>
+                <p>
+                  neoun_phone
+                </p>
+              </div>
+              <div
+                className="dataForm-card-info2"
+              >
+                <svg
+                  fill="currentColor"
+                  height="30px"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    {
+                      "color": "#000",
+                      "marginRight": "5px",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width="30px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+                <p>
+                  neoun_email
+                </p>
+              </div>
+              <div
+                className="dataForm-card-info"
+              />
+            </div>
+          </div>
+          <div
+            className="dataForm-container"
+          >
+            <div
+              className="dataForm-info-block"
+            >
+              <svg
+                className="dataForm-info"
+                fill="currentColor"
+                height="1em"
+                onClick={[Function]}
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  {
+                    "color": "#000",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 4v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm8 3h2v2h-2V7zm0 4h2v6h-2v-6z"
+                />
+              </svg>
+            </div>
+            <div
+              className="row justify-content-center input-container"
+            >
+              <div
+                className="col-md-8"
+              >
+                <div
+                  className="form-group "
+                >
+                  <input
+                    className="form-control "
+                    data-testid="name"
+                    name="name"
+                    onChange={[Function]}
+                    placeholder=" "
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    className="input-label "
+                  >
+                    name_input
+                  </label>
+                  <div
+                    className="form-error "
+                  />
+                </div>
+                <div
+                  className="form-group "
+                >
+                  <input
+                    className="form-control "
+                    data-testid="email"
+                    name="email"
+                    onChange={[Function]}
+                    placeholder=" "
+                    type="email"
+                    value=""
+                  />
+                  <label
+                    className="input-label "
+                  >
+                    email_input
+                  </label>
+                  <div
+                    className="form-error "
+                  />
+                </div>
+                <div
+                  className="voiceToTextBox"
+                >
+                  <div
+                    className="form-group "
+                  >
+                    <textarea
+                      className="form-control  multipleLines"
+                      data-testid="text"
+                      name="text"
+                      onChange={[Function]}
+                      placeholder=" "
+                      value="Hello, World!"
+                    />
+                    <label
+                      className="input-label multiple_label"
+                    >
+                      text_sentence_input
+                    </label>
+                    <div
+                      className="form-error "
+                    />
+                  </div>
+                  <button
+                    className="avatar-microphone-btn"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="fa fa-microphone"
+                    />
+                  </button>
+                   
+                </div>
+                <div
+                  className="video-container"
+                >
+                  <div
+                    className="videoinput-class"
+                  >
+                    <span
+                      className="ant-upload-wrapper css-dev-only-do-not-override-42nv3w"
+                    >
+                      <div
+                        className="ant-upload ant-upload-select"
+                      >
+                        <span
+                          className="ant-upload"
+                          onClick={[Function]}
+                          onDragOver={[Function]}
+                          onDrop={[Function]}
+                          onKeyDown={[Function]}
+                        >
+                          <input
+                            accept=".mp4"
+                            disabled={false}
+                            multiple={false}
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            style={
+                              {
+                                "display": "none",
+                              }
+                            }
+                            type="file"
+                          />
+                          <button
+                            className="ant-btn css-dev-only-do-not-override-42nv3w ant-btn-default ant-btn-lg"
+                            disabled={false}
+                            onClick={[Function]}
+                            style={{}}
+                            type="button"
+                          >
+                            <span
+                              className="ant-btn-icon"
+                              style={{}}
+                            >
+                              <span
+                                aria-label="upload"
+                                className="anticon anticon-upload"
+                                role="img"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  data-icon="upload"
+                                  fill="currentColor"
+                                  focusable="false"
+                                  height="1em"
+                                  viewBox="64 64 896 896"
+                                  width="1em"
+                                >
+                                  <path
+                                    d="M400 317.7h73.9V656c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V317.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 163a8 8 0 00-12.6 0l-112 141.7c-4.1 5.3-.4 13 6.3 13zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z"
+                                  />
+                                </svg>
+                              </span>
+                            </span>
+                            <span>
+                              choose_a_video
+                            </span>
+                          </button>
+                        </span>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className="button-container"
+                >
+                  <button
+                    className="btn btn--reset btn--large"
+                    data-testid="button-btn--reset"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    reset_btn
+                  </button>
+                  <button
+                    className="btn btn--submit btn--large"
+                    data-testid="button-btn--submit"
+                    onClick={[Function]}
+                    type="submit"
+                  >
+                    submit_btn
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="popup-modal  modal-dialog-centered modal-lg"
+    >
+      <img
+        alt=""
+        className="popup-tick img-fluid"
+        src="default"
+      />
+      <div
+        className="modal-content"
+      >
+        <h2
+          className="modal-title"
+        >
+          insThankYou
+        </h2>
+        <p
+          className="modal-body"
+        >
+          insProceedDetails
+        </p>
+        <button
+          className="btn btn-success"
+          onClick={[Function]}
+        >
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

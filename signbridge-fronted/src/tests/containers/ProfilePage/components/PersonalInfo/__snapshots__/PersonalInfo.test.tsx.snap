@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test PersonalInfo should render correctly 1`] = `
+<div>
+  <div>
+    <img
+      alt="Profile Picture"
+    />
+    <div>
+      <h1 />
+      <p />
+      <p>
+        joinedOn
+         
+        Invalid, Date
+      </p>
+    </div>
+  </div>
+</div>
+`;

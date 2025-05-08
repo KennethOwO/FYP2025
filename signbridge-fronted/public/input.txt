@@ -1,0 +1,54 @@
+1. Name of Bot: 
+Hi! My name is Sign Bot, please feel free to ask me anything related to the website.
+
+2. Website Background:
+Our website focuses on enabling two-way communication using Malaysian Sign Language (BIM). Through AI-powered tools, educational resources, and interactive games, we aim to bridge the gap between the deaf and non-deaf, making communication easier and more inclusive for everyone. The platform also encourages dataset contributions to further improve sign language recognition and foster research in this field.
+
+3. Login:
+You can log in by clicking the "Login" button on the top right corner and entering your email and password. Alternatively, you can choose to login using your own Google account.
+
+4. What is the dataset collection form for?
+Our dataset collection form encourages individuals to submit datasets in the form of videos, contributing valuable data for the improvement of our AI models' accuracy and development.
+
+5. What is Malaysian Sign Language (BIM)?
+Malaysian Sign Language, or Bahasa Isyarat Malaysia (BIM), is the primary language used by the deaf community in Malaysia. It is a unique sign language with its own grammar, structure, and signs, differing from other sign languages such as American or British Sign Language.
+
+6. How can I contribute to the dataset?
+You can contribute to our dataset by filling out our dataset collection form. Simply upload the relevant files or information you want to submit, and our team will review it. We accept contributions that can help improve sign language research and communication.
+
+7. Why is dataset contribution important?
+Contributing to the dataset helps us train AI models that improve sign language recognition and sign language production, enhancing two-way communication between sign language users and non-signers. Your data supports research and insights that drive inclusivity for the deaf community.
+
+8. Is my data safe when I submit a dataset?
+Yes, your data is secure. We take strict data privacy measures to ensure that all submitted information is protected. Any datasets submitted will be used only for research and improving our services, in accordance with privacy policies.
+
+9. How does your platform use AI in sign language recognition?
+Our platform uses AI to recognize sign language gestures and convert them into text or spoken language for non-sign language users to understand, and vice versa. The AI learns from datasets to improve its accuracy and better facilitate two-way communication.
+
+10. Can I use this platform without knowing sign language?
+Yes, our platform is designed to help both signers and non-signers communicate. The AI helps non-signers understand sign language, enabling a smooth conversation between people who use different forms of communication.
+
+11. What features are available after I log in?
+Once you log in, you’ll have access to more features such as submitting datasets, viewing your previous submissions and viewing your communication log when using the AI communication tools.
+
+12. How can I communicate with someone using sign language on your platform?
+You can use our two-way communication tool,specifically the Sign Language Recognition (SLR) which translates Malaysian Sign Language gestures into text or speech, allowing you to communicate in real time with someone using sign language. 
+
+13. Is this platform accessible for mobile users?
+Currently our platform is not mobile responsive, it is more suitable to be used on your web browser
+
+14. How does the platform benefit the deaf community?
+Our platform empowers the deaf community by providing a bridge for communication between signers and non-signers. It promotes inclusivity in education settings by ensures equal access to communication so that teachers and students alike can communicate with
+one another in a classroom setting.
+
+15. What resources do you offer to learn Malaysian Sign Language?
+We offer learning resources like video tutorials in the "Library" module, where an animated avatar demonstrates Malaysian Sign Language. We also have educational games that use our AI models to help you practice. These resources are available for anyone who wants to learn BIM.
+
+16. Do you have a support team for technical issues?
+Yes, we have a dedicated support team. If you encounter any technical issues or need assistance, you can reach us through our "Contact Us" page or send an email, and we’ll help you as soon as possible.
+
+17. Can I delete my dataset submission?
+Yes, you can request to delete or modify your dataset submission. Just contact our support team, and they will guide you through the process of making changes to your contributions.
+
+18. What games do you have on the website?
+In the "Education" module, we offer two games to help improve your BIM proficiency. The first game, "Guess The Word," uses our SLP model to create a guessing game where you try to identify the sign the avatar is performing. The second game, "Do the Sign," asks users to record themselves performing a specific sign to advance in the game and increase their score.

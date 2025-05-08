@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test VideoRecorder should render correctly 1`] = `
+<div>
+  <main>
+    <div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <span />
+        <span />
+        <span
+          className="undefined text"
+        >
+          <i
+            className="fa fa-video undefined"
+          />
+        </span>
+      </button>
+    </div>
+  </main>
+  <div>
+    <video
+      autoPlay={true}
+      className="undefined undefined"
+    />
+  </div>
+</div>
+`;

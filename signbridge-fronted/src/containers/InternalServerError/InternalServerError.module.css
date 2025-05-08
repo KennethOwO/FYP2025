@@ -1,0 +1,76 @@
+.internal_server_error_container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: #f4f4f4;
+}
+
+.animated_background {
+   position: relative;
+   text-align: center;
+   background-color: #fff;
+   padding: 40px 80px;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   animation: fadeIn 1s ease-in-out;
+}
+
+.internal_server_error_500 {
+   width: 300px;
+   height: auto;
+   margin-bottom: 20px;
+}
+
+.internal_server_error_comp {
+   width: 90px;
+   height: auto;
+   margin: 20px 20px 40px 20px;
+}
+
+.internal_server_error_title {
+   font-size: 32px;
+   font-weight: bold;
+   color: #333;
+   margin-bottom: 10px;
+}
+
+.internal_server_error_message_container {
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+.internal_server_error_message {
+   font-size: 18px;
+   color: #555;
+   margin-bottom: 40px;
+}
+
+.go_home_btn {
+   background-color: #1C2E4A;
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 1rem;
+   padding: 12px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.go_home_btn:hover {
+    background-color: #ebb54a;
+    color: #1C2E4A;
+ }
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}

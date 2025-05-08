@@ -1,0 +1,16 @@
+/* Default font size and display */
+.download-text {
+    display: inline-block;
+    font-size: 14px;
+}
+
+/* Hide text on small devices (screens smaller than 576px) */
+@media (max-width: 560px) {
+    .responsive-button {
+        width: 50px;
+    }
+
+    .download-text {
+        display: none !important;
+    }
+}

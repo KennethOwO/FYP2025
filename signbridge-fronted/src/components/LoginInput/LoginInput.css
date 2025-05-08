@@ -1,0 +1,100 @@
+.login-form-group {
+    margin-bottom: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.login-form-label {
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    text-align: left;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    color: #666;
+    transform: translateY(-50%);
+}
+
+.login-form-group input:focus + .login-form-label,
+.login-form-group input:not(:placeholder-shown) + .login-form-label {
+    top: -5px;
+    left: 50px;
+    font-size: 13px;
+    color: #000;
+}
+
+.login-form-group.error input:not(:focus) + .login-form-label,
+.login-form-group.error input:placeholder-shown + .login-form-label {
+    margin-top: -6px;
+}
+
+.login-form-group.error input:focus + .login-form-label,
+.login-form-group.error input:not(:placeholder-shown) + .login-form-label {
+    margin-top: 0px;
+}
+
+.login-error-message {
+    color: red;
+    font-size: 10px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-form-group.error input {
+    border-color: red;
+    border-radius: 3px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 30%;
+    right: 12%;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transform: translateY(-80%);
+}
+
+.eye-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 50%;
+    cursor: pointer;
+}
+
+.login-form-group.error .eye-icon {
+    margin-top: -4px;
+    top: 20%;
+}
+
+@media screen and (max-width: 1500px) {
+    .password-toggle {
+        top: 30%;
+    }
+
+    .eye-icon {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .password-toggle {
+        top: 30%;
+    }
+
+    .eye-icon {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .password-toggle {
+        top: 30%;
+    }
+
+    .eye-icon {
+        right: -15%;
+    }
+}

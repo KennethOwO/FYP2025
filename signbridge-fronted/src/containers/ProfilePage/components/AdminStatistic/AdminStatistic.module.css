@@ -1,0 +1,114 @@
+.AdminStatisticContainer {
+    width: 100%;
+}
+
+.AdminStatisticAmounts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.Cards {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.CardContent {
+    display: flex;
+    text-align: center;
+}
+
+.Icons {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+.CardWords {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.CardTitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a9a9aa;
+}
+
+.CardAmount {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.AdminStatisticGraph {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.GraphTitleContainer {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.Rectangle {
+    width: 20px;
+    height: 32px;
+    background-color: #fbf3a0;
+    border-radius: 4px;
+}
+
+.GraphTitle {
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-self: flex-start;
+    margin-left: 10px;
+}
+
+.ChartContainer {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1360px) {
+    .AdminStatisticContainer {
+        width: 99%;
+    }
+
+    .AdminStatisticAmounts {
+        flex-direction: row;
+        justify-content: inherit;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .AdminStatisticAmounts {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ChartContainer {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ChartContainer {
+        height: 250px;
+    }
+}

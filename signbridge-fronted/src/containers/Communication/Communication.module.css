@@ -1,0 +1,961 @@
+.communication-body {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.container-wrapper {
+    position: relative;
+    padding: 50px 50px 0px 50px;
+    display: flex;
+    margin-left: 12.5%;
+    width: 75vw;
+}
+
+.active {
+    border-radius: 25px 0px 0px 25px;
+}
+
+.communication-menu {
+    box-shadow: black 0px 0px 4px 0px;
+    position: absolute;
+    width: 64vw;
+    height: 8vh;
+    background-color: #000;
+    border-radius: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.communication-menu button {
+    font-weight: 600;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+}
+
+.communication-menu .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all 0.5s ease 0s;
+    border-radius: 15px;
+}
+
+.communication-menu button:nth-child(1) {
+    width: 32vw;
+}
+
+.communication-menu button:nth-child(2) {
+    width: 32vw;
+}
+
+.communication-menu .start-home,
+button:nth-child(1):hover ~ .animation {
+    width: 32vw;
+    left: 0;
+    background-color: #3d648d;
+}
+
+.communication-menu .start-about,
+button:nth-child(2):hover ~ .animation {
+    width: 32vw;
+    left: 32vw;
+    background-color: #3d648d;
+}
+
+/********************* For SLP *********************/
+/***************************************************/
+/***************************************************/
+.contentContainer {
+    padding-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.contentWrapper {
+    background-color: white;
+    position: relative;
+    margin-top: 13vh;
+    min-height: 91vh;
+    width: 60%;
+    max-width: 1200px;
+    box-shadow: black 0px 0px 4px 0px;
+    border-bottom: 3px solid rgba(69, 49, 36, 0.5);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.canvasBgWrapper {
+    top: 7vh;
+    position: absolute;
+    width: 35vw;
+    height: 80vh;
+}
+
+.circleBg {
+    position: absolute;
+    width: 30vw;
+    height: 65vh;
+    background: linear-gradient(#3d648d, #2b3f5a); /* Gradient background */
+    border-radius: 50%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 15px 10px 25px rgba(0, 0, 0, 0.5); /* Thicker shadow with higher blur */
+    z-index: 0; /* Ensure it’s behind the Canvas */
+}
+
+.helperBox {
+    position: absolute;
+    right: 40px;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+    max-height: 31vh;
+    z-index: 1;
+    border-radius: 20px;
+    font-size: clamp(14px, 1vw, 18px); /* Responsive font size with min/max limits */
+    width: min(20vw, 300px);
+}
+
+.controlBox {
+    top: 45%;
+    transform: translateY(-50%);
+    padding: 15px 15px;
+    max-height: calc(80vh - 100px);
+}
+
+.controlBox h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    margin: -15px -15px 10px -15px;
+}
+
+.infoIcon {
+    color: white;
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    margin-right: 10px;
+}
+
+.disclaimerBox {
+    top: 40%;
+    transform: translateY(150%);
+    display: flex;
+    padding: 10px 15px;
+}
+
+.disclaimerText {
+    line-height: 1.5;
+}
+
+.rectangleOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.speed-control-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+.speed-span {
+    margin: 5px 0;
+    color: #000;
+}
+
+/* Custom slider styling */
+.speed-slider {
+    width: 100% !important;
+    height: 4px !important;
+    padding: 15px 0 !important;
+}
+
+/* Slider track styling */
+.speed-slider :global(.MuiSlider-track) {
+    height: 4px;
+    background: linear-gradient(90deg, #4caf50, #2196f3) !important;
+    border: none;
+}
+
+/* Slider thumb (handle) styling */
+.speed-slider :global(.MuiSlider-thumb) {
+    width: 20px !important;
+    height: 20px !important;
+    background: #fff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect for thumb */
+.speed-slider :global(.MuiSlider-thumb:hover) {
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Active effect for thumb */
+.speed-slider :global(.MuiSlider-thumb.Mui-active) {
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Speed value indicator */
+.speed-value {
+    position: absolute;
+    color: #fff;
+    font-size: 0.9vw;
+    font-weight: bold;
+    background: linear-gradient(90deg, #4caf50, #2196f3);
+    padding: 5px 8px;
+    border-radius: 12px;
+    bottom: -30px;
+    left: calc(15px + ((var(--slider-value) - 0.2) / (2 - 0.2) * (100% - 30px)));
+    transform: translateX(-50%);
+    transition: left 0.1s ease-out;
+}
+
+/* Add a small triangle to the speed value */
+.speed-value::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #4caf50;
+}
+
+.left-handed .canvas-wrapper {
+    transform: scaleX(-1);
+}
+
+.voice-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.avatar-textbox {
+    position: relative;
+    font-size: 2vh;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    width: 26vw;
+    height: 5vh;
+    resize: none;
+    padding: 8px;
+    overflow-y: auto; /* Allows scrolling, hides scrollbar */
+    scrollbar-width: none; /* For Firefox */
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    color: white;
+    background-color: #333;
+}
+
+.textInputWrapper {
+    width: 25vw;
+    gap: 10px; /* Space between input and button */
+}
+
+.avatarplay-btn {
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 1px solid #cad8e6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1vw;
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+}
+
+.avatarplay-btn:hover {
+    background-color: #3d648d;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.8), -0.125rem -0.125rem 1rem rgba(61, 100, 141, 0.8), 0.125rem 0.125rem 1rem rgba(61, 100, 141, 0.8);
+}
+
+.gloss-box {
+    padding: 5px;
+    border: 1px solid #353535;
+    border-radius: 10px;
+    width: 16vw !important;
+    position: relative;
+    left: 50%;
+    top: -30px;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+    background-color: white;
+    z-index: 1;
+    margin-bottom: -10px;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* Update the FormControlLabel styling */
+.custom-checkbox-label {
+    margin-top: 20px !important; /* Add space above the checkbox */
+    padding: 0 15px; /* Match the padding of the speed control */
+}
+
+/* If you need to adjust the label text specifically */
+.custom-checkbox-label .MuiFormControlLabel-label {
+    font-size: 1vw;
+    color: #fff;
+}
+
+/* Add these new styles */
+.settingsButton {
+    position: absolute;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1;
+    display: none; /* Hidden by default */
+}
+
+.settingsButton:hover {
+    background: #444;
+}
+
+.settingsPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 100%;
+    max-width: 400px;
+    max-height: 80vh;
+}
+
+/* Add styles for the close button */
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.closeButton:hover {
+    opacity: 0.8;
+}
+
+/* Update the settings popup header to accommodate the close button */
+.settingsPopup h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 40px 15px 15px; /* Add right padding for close button */
+    border-radius: 10px 10px 0 0;
+    margin: -20px -20px 20px -20px;
+}
+
+.settingsIcon {
+    font-size: 2vw;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.btnText {
+    margin-top: 5px;
+}
+
+/********************* For SLR *********************/
+/***************************************************/
+/***************************************************/
+.avatarMicrophoneBtn {
+    font-size: 1vw;
+    color: white;
+    font-weight: bold;
+    transform: translate(-0%, -50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatarMicrophoneBtn:hover .tooltip2 {
+    visibility: visible;
+}
+/* Common styles for all FA icons */
+.faMicrophone,
+.faStopBtn {
+    font-size: 2vw !important;
+    color: #ffffff;
+    background-color: #261474;
+    border-radius: 15%;
+    padding: 10px;
+    width: 3vw; /* Fixed width */
+    height: 3vw; /* Fixed height */
+    display: flex; /* Flex to center the icon */
+    align-items: center; /* Vertically center the icon */
+    justify-content: center; /* Horizontally center the icon */
+    margin: 0 25px;
+}
+
+/* Hover effects for each icon */
+.faMicrophone:hover,
+.faStopBtn:hover {
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.8), -0.125rem -0.125rem 1rem rgba(45, 43, 184, 0.8), 0.125rem 0.125rem 1rem rgba(16, 13, 204, 0.8);
+}
+
+.tooltip2 {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+}
+
+.slr-content-wrapper {
+    width: 55%;
+    background-color: white;
+    box-shadow: black 0px 0px 4px 0px;
+    border-bottom: 3px solid rgba(69, 49, 36, 0.5);
+    border-radius: 5px;
+}
+
+.slr-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5vw;
+    width: 100%;
+    padding: 40px 2vw;
+    margin-top: 7.5vh;
+}
+
+/* Add media queries for different screen sizes */
+@media screen and (min-width: 1600px) {
+    .rectangleOverlay {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    /********************* For SLR *********************/
+    /***************************************************/
+    /***************************************************/
+    .contentWrapper {
+        width: 75%;
+    }
+
+    .helperBox {
+        width: 25vw;
+    }
+
+    .disclaimerBox {
+        margin-top: 50px;
+    }
+
+    .canvasBgWrapper {
+        width: 45vw;
+    }
+
+    .circleBg {
+        width: 35vw;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .rectangleOverlay {
+        width: 80%;
+    }
+
+    .avatarMicrophoneBtn {
+        font-size: 15px;
+    }
+
+    .faMicrophone {
+        font-size: 25px !important;
+        border-radius: 15%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .communication-body {
+        height: auto;
+        padding-bottom: 6vh;
+    }
+
+    .container-wrapper {
+        padding: 50px 20px 0px 20px;
+        margin-left: 5%;
+        width: 90vw;
+    }
+
+    .communication-menu {
+        width: 80vw;
+    }
+
+    .communication-menu button:nth-child(1),
+    .communication-menu button:nth-child(2) {
+        width: 40vw;
+    }
+
+    .communication-menu .start-home,
+    .communication-menu .start-about,
+    button:nth-child(1):hover ~ .animation,
+    button:nth-child(2):hover ~ .animation {
+        width: 40vw;
+    }
+
+    .communication-menu .start-about,
+    button:nth-child(2):hover ~ .animation {
+        left: 40vw;
+    }
+
+    /********************* For SLR *********************/
+    /***************************************************/
+    /***************************************************/
+    .slr-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+        padding: 0 2vw;
+        margin-top: 13vh;
+    }
+
+    .slr-content-wrapper {
+        height: 95vh;
+        width: 85%;
+        background-color: white;
+        box-shadow: black 0px 0px 4px 0px;
+        border-bottom: 3px solid rgba(69, 49, 36, 0.5);
+        border-radius: 5px;
+    }
+
+    /********************* For SLR *********************/
+    /***************************************************/
+    /***************************************************/
+    .contentWrapper {
+        width: 75%;
+    }
+
+    .helperBox {
+        width: 25vw;
+    }
+
+    .disclaimerBox {
+        margin-top: 10px;
+    }
+
+    .canvasBgWrapper {
+        width: 45vw;
+    }
+
+    .circleBg {
+        width: 35vw;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    /********************* For SLP *********************/
+    /***************************************************/
+    /***************************************************/
+    .avatarplay-btn {
+        font-size: 15px;
+    }
+
+    .avatar-textbox {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    /********************* For SLP *********************/
+    /***************************************************/
+    /***************************************************/
+    .contentWrapper {
+        width: 50% !important;
+        margin: 13vh auto 0 !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .disclaimerBox {
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        position: absolute;
+        left: 45%;
+        top: -5px;
+        align-items: center;
+    }
+
+    .disclaimerBox .disclaimerText {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        width: 200px;
+        right: 0;
+        top: 100%;
+        margin-top: 10px;
+        z-index: 10;
+    }
+
+    .disclaimerBox:hover .disclaimerText {
+        display: block;
+    }
+
+    .infoIcon {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 20px 10px;
+    }
+
+    .helperBox.controlBox {
+        display: none; /* Hide the original control box */
+    }
+
+    .settingsButton {
+        display: flex; /* Show settings button */
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        margin: 25px 30px;
+    }
+
+    .settingsPopup h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 15px;
+        border-radius: 10px 10px 0 0;
+        margin: -20px -20px 20px -20px;
+    }
+
+    .rectangleOverlay {
+        width: 80%;
+    }
+
+    .avatarMicrophoneBtn {
+        font-size: 15px;
+    }
+
+    .faMicrophone {
+        font-size: 25px !important;
+        border-radius: 15%;
+        padding: 20px;
+    }
+
+    .gloss-box {
+        width: 30vw !important;
+    }
+
+    .speed-value {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    /********************* For SLP *********************/
+    /***************************************************/
+    /***************************************************/
+    .contentWrapper {
+        width: 75% !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rectangleOverlay {
+        width: 100%;
+    }
+
+    .infoIcon {
+        margin: 20px -100px;
+    }
+
+    .gloss-box {
+        width: 50vw !important;
+    }
+}
+
+/* Add media query for mobile view */
+@media screen and (max-width: 750px) {
+    .communication-body {
+        height: auto;
+        padding-bottom: 6vh;
+    }
+
+    /********************* For SLR *********************/
+    /***************************************************/
+    /***************************************************/
+    .contentWrapper {
+        width: 75% !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slr-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        padding: 0 1vw;
+        margin-top: 10vh;
+    }
+
+    .slr-content-wrapper {
+        width: 90%;
+        margin-top: 3vh;
+    }
+
+    .container-wrapper {
+        padding: 50px 10px 0px 10px;
+        margin-left: 0;
+        width: 100vw;
+    }
+
+    .communication-menu {
+        width: 90vw;
+    }
+
+    .communication-menu button:nth-child(1),
+    .communication-menu button:nth-child(2) {
+        width: 45vw;
+    }
+
+    .communication-menu .start-home,
+    .communication-menu .start-about,
+    button:nth-child(1):hover ~ .animation,
+    button:nth-child(2):hover ~ .animation {
+        width: 45vw;
+    }
+
+    .communication-menu .start-about,
+    button:nth-child(2):hover ~ .animation {
+        left: 45vw;
+    }
+
+    .rectangleOverlay {
+        width: 90%;
+    }
+
+    .faMicrophone {
+        font-size: 23px !important;
+        border-radius: 15%;
+        padding: 18px;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    /********************* For SLP *********************/
+    /***************************************************/
+    /***************************************************/
+    .infoIcon {
+        margin: 20px -90px;
+    }
+}
+
+/* Add media query for mobile view */
+@media screen and (max-width: 700px) {
+    .communication-body {
+        height: auto;
+        padding-bottom: 6vh;
+    }
+
+    /********************* For SLR *********************/
+    /***************************************************/
+    /***************************************************/
+
+    .slr-container {
+        margin-top: 10vh;
+    }
+
+    /********************* For SLP *********************/
+    /***************************************************/
+    /***************************************************/
+
+    .rectangleOverlay {
+        width: 50vw;
+    }
+
+    .settingsIcon {
+        font-size: 20px;
+    }
+
+    .infoIcon {
+        margin: 20px -80px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .rectangleOverlay {
+        width: 60vw;
+    }
+
+    .infoIcon {
+        margin: 20px -70px;
+    }
+
+    .gloss-box {
+        width: 40vw !important;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .infoIcon {
+        margin: 20px -50px;
+    }
+
+    .rectangleOverlay {
+        width: 70vw;
+    }
+
+    .avatar-textbox {
+        min-width: 45vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contentWrapper {
+        width: 85% !important;
+    }
+
+    .rectangleOverlay {
+        width: 75vw;
+    }
+
+    .circleBg {
+        display: none;
+    }
+
+    .avatar-textbox {
+        min-width: 45vw;
+    }
+
+    .gloss-box {
+        font-size: 15px;
+    }
+
+    .canvasBgWrapper {
+        width: 65vw;
+    }
+
+    .settingsPopup {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .infoIcon {
+        margin: 20px -70px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contentWrapper {
+        width: 90% !important;
+    }
+
+    .rectangleOverlay {
+        width: 85vw;
+        bottom: -20px;
+    }
+
+    .circleBg {
+        display: none;
+    }
+
+    .avatar-textbox {
+        min-width: 45vw;
+    }
+
+    .gloss-box {
+        font-size: 13px;
+        width: 50vw !important;
+    }
+
+    .settingsPopup {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-height: 580px) {
+    .disclaimerBox {
+        top: 30vh; /* Move up from bottom */
+    }
+}

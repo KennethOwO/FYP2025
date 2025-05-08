@@ -1,0 +1,1532 @@
+[
+  {
+    "keyword": "ADIK PEREMPUAN",
+    "animations": [
+      "AdikPerempuan"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/adikperempuan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BADAN",
+    "animations": [
+      "Badan"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/badan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BAHU",
+    "animations": [
+      "Bahu"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/bahu.png",
+    "frames": 0
+  },
+  {
+    "keyword": "JURURAWAT",
+    "animations": [
+      "Jururawat"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/jururawat.png",
+    "frames": 0
+  },
+  {
+    "keyword": "JARI",
+    "animations": [
+      "Jari"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/jari.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KAKI",
+    "animations": [
+      "Kaki"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kaki.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KULIT",
+    "animations": [
+      "Kulit"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kulit.png",
+    "frames": 0
+  },
+  {
+    "keyword": "LEHER",
+    "animations": [
+      "Leher"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/leher.png",
+    "frames": 0
+  },
+  {
+    "keyword": "DOKTOR",
+    "animations": [
+      "Doktor"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/doktor.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BIBIR",
+    "animations": [
+      "Bibir"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/bibir.png",
+    "frames": 0
+  },
+  {
+    "keyword": "GIGI",
+    "animations": [
+      "Gigi"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/gigi.png",
+    "frames": 0
+  },
+  {
+    "keyword": "HIDUNG",
+    "animations": [
+      "Hidung"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/hidung.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MATA",
+    "animations": [
+      "Mata"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/mata.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MULUT",
+    "animations": [
+      "Mulut"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/mulut.png",
+    "frames": 0
+  },
+  {
+    "keyword": "LEMAH",
+    "animations": [
+      "Lemah"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/lemah.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TULANG",
+    "animations": [
+      "Tulang"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tulang.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SINAR-X",
+    "animations": [
+      "SinarX"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/sinar-x.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TULANG RUSUK",
+    "animations": [
+      "TulangRusuk"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tulangrusuk.png",
+    "frames": 0
+  },
+  {
+    "keyword": "DARAH",
+    "animations": [
+      "Darah"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/darah.png",
+    "frames": 0
+  },
+  {
+    "keyword": "JANTUNG",
+    "animations": [
+      "Jantung"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/jantung.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KESAKITAN",
+    "animations": [
+      "Kesakitan"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kesakitan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BUAH PINGGANG",
+    "animations": [
+      "BuahPinggang"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/buahpinggang.png",
+    "frames": 0
+  },
+  {
+    "keyword": "ASMA",
+    "animations": [
+      "Asma"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/asma.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BATUK",
+    "animations": [
+      "Batuk"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/batuk.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BENGKAK",
+    "animations": [
+      "Bengkak"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/bengkak.png",
+    "frames": 0
+  },
+  {
+    "keyword": "GATAL",
+    "animations": [
+      "Gatal"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/gatal.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MUNTAH",
+    "animations": [
+      "Muntah"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/muntah.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SELESEMA",
+    "animations": [
+      "Selesema"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/selesema.png",
+    "frames": 0
+  },
+  {
+    "keyword": "DEMAM",
+    "animations": [
+      "Demam"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/demam.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SAKIT KEPALA",
+    "animations": [
+      "SakitKepala"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/sakitkepala.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SAKIT PERUT",
+    "animations": [
+      "SakitPerut"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/sakitperut.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SAKIT PINGGANG",
+    "animations": [
+      "SakitPinggang"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/sakitpinggang.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SAKIT TEKAK",
+    "animations": [
+      "SakitTekak"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/sakittekak.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BEDAH",
+    "animations": [
+      "Bedah"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/bedah.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KECEMASAN",
+    "animations": [
+      "Kecemasan"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kecemasan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KRIM",
+    "animations": [
+      "Krim"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/krim.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PIL",
+    "animations": [
+      "Pil"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/pil.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MENGANDUNG",
+    "animations": [
+      "Mengandung"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/mengandung.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PENAT",
+    "animations": [
+      "Penat"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/penat.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PERUT",
+    "animations": [
+      "Perut"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/perut.png",
+    "frames": 0
+  },
+  {
+    "keyword": "DATUK",
+    "animations": [
+      "Datuk"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/datuk.png",
+    "frames": 0
+  },
+  {
+    "keyword": "ADIK PEREMPUAN",
+    "animations": [
+      "AdikPerempuan"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/adikperempuan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "HUJAN",
+    "animations": [
+      "Hujan"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/hujan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PERGI",
+    "animations": [
+      "Pergi"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/pergi.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KERANA",
+    "animations": [
+      "Kerana"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kerana.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TINGGI",
+    "animations": [
+      "Tinggi"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tinggi.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BELAJAR",
+    "animations": [
+      "Belajar"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/belajar.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TUMBUHAN",
+    "animations": [
+      "Tumbuhan"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tumbuhan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "HIDUP",
+    "animations": [
+      "Hidup"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/hidup.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MAKAN",
+    "animations": [
+      "Makan"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/makan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "AKAN",
+    "animations": [
+      "Akan"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/akan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "ITU",
+    "animations": [
+      "Itu"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/itu.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SEBAGAI",
+    "animations": [
+      "Sebagai"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/sebagai.png",
+    "frames": 0
+  },
+  {
+    "keyword": "UDARA",
+    "animations": [
+      "Udara"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/udara.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MANUSIA",
+    "animations": [
+      "Manusia"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/manusia.png",
+    "frames": 0
+  },
+  {
+    "keyword": "AIR",
+    "animations": [
+      "Air"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/air.png",
+    "frames": 0
+  },
+  {
+    "keyword": "NUTRIEN",
+    "animations": [
+      "Nutrien"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/nutrien.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TANAH",
+    "animations": [
+      "Tanah"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tanah.png",
+    "frames": 0
+  },
+  {
+    "keyword": "FOTOSINTESIS",
+    "animations": [
+      "Fotosintesis"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/fotosintesis.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MATAHARI",
+    "animations": [
+      "Matahari"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/matahari.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TERANG",
+    "animations": [
+      "Terang"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/terang.png",
+    "frames": 0
+  },
+  {
+    "keyword": "COKLAT",
+    "animations": [
+      "Coklat"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/coklat.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KUNING",
+    "animations": [
+      "Kuning"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kuning.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TENAGA",
+    "animations": [
+      "Tenaga"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tenaga.png",
+    "frames": 0
+  },
+  {
+    "keyword": "DUIT",
+    "animations": [
+      "Duit"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/duit.png",
+    "frames": 0
+  },
+  {
+    "keyword": "JIMAT",
+    "animations": [
+      "Jimat"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/jimat.png",
+    "frames": 0
+  },
+  {
+    "keyword": "ALAM SEKITAR",
+    "animations": [
+      "AlamSekitar"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/alamsekitar.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PENCEMARAN UDARA",
+    "animations": [
+      "PencemaranUdara"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/pencemaranudara.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BERSIH",
+    "animations": [
+      "Bersih"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/bersih.png",
+    "frames": 0
+  },
+  {
+    "keyword": "WAKTU DEPAN",
+    "animations": [
+      "WaktuDepan"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/waktudepan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SUMBER",
+    "animations": [
+      "Sumber"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/sumber.png",
+    "frames": 0
+  },
+  {
+    "keyword": "LED",
+    "animations": [
+      "LED"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/led.png",
+    "frames": 0
+  },
+  {
+    "keyword": "LAMPU",
+    "animations": [
+      "Lampu"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/lampu.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TELEFON",
+    "animations": [
+      "Telefon"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/telefon.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SEJUK",
+    "animations": [
+      "Sejuk"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/sejuk.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MANDI",
+    "animations": [
+      "Mandi"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/mandi.png",
+    "frames": 0
+  },
+  {
+    "keyword": "ELEKTRIK",
+    "animations": [
+      "Elektrik"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/elektrik.png",
+    "frames": 0
+  },
+  {
+    "keyword": "RUMAH",
+    "animations": [
+      "Rumah"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/rumah.png",
+    "frames": 0
+  },
+  {
+    "keyword": "HARI",
+    "animations": [
+      "Hari"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/hari.png",
+    "frames": 0
+  },
+  {
+    "keyword": "INI",
+    "animations": [
+      "Ini"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/ini.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KITA",
+    "animations": [
+      "Kita"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kita.png",
+    "frames": 0
+  },
+  {
+    "keyword": "CARA",
+    "animations": [
+      "Cara"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/cara.png",
+    "frames": 0
+  },
+  {
+    "keyword": "JAGA",
+    "animations": [
+      "Jaga"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/jaga.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BENDA",
+    "animations": [
+      "Benda"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/benda.png",
+    "frames": 0
+  },
+  {
+    "keyword": "HASIL",
+    "animations": [
+      "Hasil"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/hasil.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SENDIRI",
+    "animations": [
+      "Sendiri"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/sendiri.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SATU",
+    "animations": [
+      "Satu"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/satu.png",
+    "frames": 0
+  },
+  {
+    "keyword": "UNTUK",
+    "animations": [
+      "Untuk"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/untuk.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PERTAMA SEKALI",
+    "animations": [
+      "PertamaSekali"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/pertamasekali.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MARI",
+    "animations": [
+      "Mari"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/mari.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BINCANG",
+    "animations": [
+      "Bincang"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/bincang.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TENTANG",
+    "animations": [
+      "Tentang"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tentang.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PALING",
+    "animations": [
+      "Paling"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/paling.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PENTING",
+    "animations": [
+      "Penting"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/penting.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TOLONG",
+    "animations": [
+      "Tolong"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tolong.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PINDAH",
+    "animations": [
+      "Pindah"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/pindah.png",
+    "frames": 0
+  },
+  {
+    "keyword": "DARI",
+    "animations": [
+      "Dari"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/dari.png",
+    "frames": 0
+  },
+  {
+    "keyword": "DALAM",
+    "animations": [
+      "Dalam"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/dalam.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TERLALU BANYAK",
+    "animations": [
+      "TerlaluBanyak"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/terlalubanyak.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BOLEH",
+    "animations": [
+      "Boleh"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/boleh.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BAHAYA",
+    "animations": [
+      "Bahaya"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/bahaya.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MEREKA",
+    "animations": [
+      "Mereka"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/mereka.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SEDIKIT",
+    "animations": [
+      "Sedikit"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/sedikit.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TIDAK",
+    "animations": [
+      "Tidak"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tidak.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BAIK",
+    "animations": [
+      "Baik"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/baik.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SETERUSNYA",
+    "animations": [
+      "Seterusnya"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/seterusnya.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PERLU",
+    "animations": [
+      "Perlu"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/perlu.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BUAT",
+    "animations": [
+      "Buat"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/buat.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PROSES",
+    "animations": [
+      "Proses"
+    ],
+    "category": "Science",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/proses.png",
+    "frames": 0
+  },
+  {
+    "keyword": "NAMA",
+    "animations": [
+      "Nama"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/nama.png",
+    "frames": 0
+  },
+  {
+    "keyword": "LETAK",
+    "animations": [
+      "Letak"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/letak.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TEMPAT",
+    "animations": [
+      "Tempat"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tempat.png",
+    "frames": 0
+  },
+  {
+    "keyword": "AKHIR SEKALI",
+    "animations": [
+      "AkhirSekali"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/akhirsekali.png",
+    "frames": 0
+  },
+  {
+    "keyword": "INGAT",
+    "animations": [
+      "Ingat"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/ingat.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PERIKSA",
+    "animations": [
+      "Periksa"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/periksa.png",
+    "frames": 0
+  },
+  {
+    "keyword": "ANDA",
+    "animations": [
+      "Anda"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/anda.png",
+    "frames": 0
+  },
+  {
+    "keyword": "LIHAT",
+    "animations": [
+      "Lihat"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/lihat.png",
+    "frames": 0
+  },
+  {
+    "keyword": "DAUN",
+    "animations": [
+      "Daun"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/daun.png",
+    "frames": 0
+  },
+  {
+    "keyword": "WARNA",
+    "animations": [
+      "Warna"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/warna.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MAKNA",
+    "animations": [
+      "Makna"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/makna.png",
+    "frames": 0
+  },
+  {
+    "keyword": "CUKUP",
+    "animations": [
+      "Cukup"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/cukup.png",
+    "frames": 0
+  },
+  {
+    "keyword": "DAN",
+    "animations": [
+      "Dan"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/dan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TUNJUK",
+    "animations": [
+      "Tunjuk"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tunjuk.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KURANG",
+    "animations": [
+      "Kurang"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kurang.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TANGGUNGJAWAB",
+    "animations": [
+      "Tanggungjawab"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tanggungjawab.png",
+    "frames": 0
+  },
+  {
+    "keyword": "HALANG",
+    "animations": [
+      "Halang"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/halang.png",
+    "frames": 0
+  },
+  {
+    "keyword": "GANTUNG",
+    "animations": [
+      "Gantung"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/gantung.png",
+    "frames": 0
+  },
+  {
+    "keyword": "GUNA",
+    "animations": [
+      "Guna"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/guna.png",
+    "frames": 0
+  },
+  {
+    "keyword": "TUKAR",
+    "animations": [
+      "Tukar"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/tukar.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BEBERAPA",
+    "animations": [
+      "Beberapa"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/beberapa.png",
+    "frames": 0
+  },
+  {
+    "keyword": "LANGKAH",
+    "animations": [
+      "Langkah"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/langkah.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SENANG",
+    "animations": [
+      "Senang"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/senang.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MATI",
+    "animations": [
+      "Mati"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/mati.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PENGANGKUTAN AWAM",
+    "animations": [
+      "PengangkutanAwam"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/pengangkutanawam.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KONGSI",
+    "animations": [
+      "Kongsi"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kongsi.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KAWAN",
+    "animations": [
+      "Kawan"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kawan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "KERETA",
+    "animations": [
+      "Kereta"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/kereta.png",
+    "frames": 0
+  },
+  {
+    "keyword": "ATAU",
+    "animations": [
+      "Atau"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/atau.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BASIKAL",
+    "animations": [
+      "Basikal"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/basikal.png",
+    "frames": 0
+  },
+  {
+    "keyword": "CUBA",
+    "animations": [
+      "Cuba"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/cuba.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BERJALAN",
+    "animations": [
+      "Berjalan"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/berjalan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "JARAK",
+    "animations": [
+      "Jarak"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/jarak.png",
+    "frames": 0
+  },
+  {
+    "keyword": "PENDEK",
+    "animations": [
+      "Pendek"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/pendek.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MENAIKI",
+    "animations": [
+      "Menaiki"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/menaiki.png",
+    "frames": 0
+  },
+  {
+    "keyword": "BAS",
+    "animations": [
+      "Bas"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/bas.png",
+    "frames": 0
+  },
+  {
+    "keyword": "IA",
+    "animations": [
+      "Ia"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/ia.png",
+    "frames": 0
+  },
+  {
+    "keyword": "DENGAN",
+    "animations": [
+      "Dengan"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/dengan.png",
+    "frames": 0
+  },
+  {
+    "keyword": "LEBIH",
+    "animations": [
+      "Lebih"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/lebih.png",
+    "frames": 0
+  },
+  {
+    "keyword": "CEGAH",
+    "animations": [
+      "Cegah"
+    ],
+    "category": "Medical",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/cegah.png",
+    "frames": 0
+  },
+  {
+    "keyword": "SAYA",
+    "animations": [
+      "Saya"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/saya.png",
+    "frames": 0
+  },
+  {
+    "keyword": "HABIS",
+    "animations": [
+      "Habis"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/habis.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MAHU",
+    "animations": [
+      "Mahu"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/mahu.png",
+    "frames": 0
+  },
+  {
+    "keyword": "MESTI",
+    "animations": [
+      "Mesti"
+    ],
+    "category": "Conversation",
+    "contributor": "SARAWAK SOCIETY FOR THE DEAF (SSD)",
+    "thumbnail": "/images/signImages/mesti.png",
+    "frames": 0
+  }
+]

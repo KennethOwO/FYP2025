@@ -1,0 +1,164 @@
+.remind_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.remind_content {
+    background-color: #4c4e4d;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    text-align: center;
+}
+
+.remind_content p {
+    font-family: "Russo One", sans-serif;
+    padding: 0 40px;
+    font-size: 20px;
+}
+
+.remind_details {
+    background-color: #ecedec;
+    border: 8px solid #4c4e4d;
+    border-radius: 20px;
+    width: 500px;
+    height: 185px;
+    padding: 20px;
+}
+
+.remind_title {
+    font-family: "Russo One", sans-serif;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.close_btn_pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 25px auto;
+    display: flex;
+}
+
+.close_btn_shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+}
+
+.close_btn_edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+        to left,
+        hsl(340deg 100% 16%) 0%,
+        hsl(340deg 100% 32%) 8%,
+        hsl(340deg 100% 32%) 92%,
+        hsl(340deg 100% 16%) 100%
+    );
+}
+
+.close_btn_front {
+    display: block;
+    position: relative;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    padding: 5px 12px;
+    color: white;
+    height: 45px;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.close_btn_pushable:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.close_btn_pushable:hover .close_btn_front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.close_btn_pushable:active .close_btn_front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.close_btn_pushable:hover .close_btn_shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.close_btn_pushable:active .close_btn_shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.close_btn_pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .remind_details {
+        width: 100%;
+        padding: 15px;
+        height: auto;
+    }
+
+    .remind_title {
+        font-size: 16px;
+    }
+
+    .close_btn_front {
+        font-size: 1rem;
+        height: 40px;
+        padding: 4px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .remind_details {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .remind_title {
+        font-size: 14px;
+    }
+
+    .close_btn_front {
+        font-size: 0.875rem;
+        height: 35px;
+        padding: 3px 8px;
+    }
+}

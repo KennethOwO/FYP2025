@@ -1,0 +1,28 @@
+.order_filter {
+    margin: 10px 0 20px 10px;
+}
+
+.order_filter .ant_select_selector {
+    font-size: 20px;
+    padding: 12px 20px;
+    border: 1px solid #838383 !important;
+}
+
+.order_filter_dropdown {
+    border-radius: 8px;
+    box-shadow: 5px 10px 14px rgba(0, 0, 0, 0.5);
+}
+
+.order_filter_dropdown .ant_select_item {
+    padding: 12px 16px;
+    font-size: 20px;
+}
+
+.order_filter_dropdown .ant_select_item_option_selected:not(.ant_select_item_option_disabled) {
+    background-color: #bda400;
+    color: white
+}
+
+.order_filter_dropdown .ant_select_item_option:hover {
+    background-color: #dfdfdf;
+}

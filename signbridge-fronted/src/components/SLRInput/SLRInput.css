@@ -1,0 +1,241 @@
+/* Container styles */
+.slr-input-container {
+    margin: 5vh auto;
+    background-color: #fff;
+}
+
+.slr-input-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Menu container styles */
+.slr-input-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%;
+    margin: 0% 5% 12% 5%;
+    padding: 3%;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+}
+
+/* Base button styles with transform on hover */
+.slr-input-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 6vh;
+    font-size: 2vw;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.slr-input-btn::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.501);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+    z-index: 1000;
+}
+
+.slr-input-btn:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Button 1 and 2 (Get Video) - Adjusted Primary Color */
+.slr-input-btn.get-video {
+    background-color: #2c3f5a;
+    color: #fff;
+}
+
+.slr-input-btn.get-video:hover {
+    background-color: #1c2e4a;
+}
+
+/* Button 3 (Reset) - Darker Red Theme on Hover */
+.slr-input-btn.reset {
+    background-color: #c0392b;
+    color: #fff;
+}
+
+.slr-input-btn.reset:hover {
+    background-color: #962d21;
+    /* Darker red on hover */
+}
+
+/* Button 4 (Submit) - Darker Green Theme on Hover */
+.slr-input-btn.submit {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.slr-input-btn.submit:hover {
+    background-color: #1e8449;
+    /* Darker green on hover */
+}
+
+/* Disabled state for all buttons */
+.slr-input-btn:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.slr-video-container {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.2);
+}
+
+.slr-preview-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slr-preview-video.active {
+    opacity: 1;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+.loading-overlay p {
+    color: white;
+    font-size: 1.2em;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.slr-video-container {
+    position: relative;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 1100px) {
+    .slr-input-container {
+        margin-top: 3vh;
+    }
+
+    .slr-input-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Create 2 columns */
+        grid-gap: 10px; /* Add gap between buttons */
+        margin: 5%;
+        padding: 2%;
+    }
+
+    .slr-input-btn {
+        height: 8vh;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .fa {
+        font-size: 28px;
+    }
+
+    /* Adjust tooltip position for mobile */
+    .slr-input-btn::before {
+        bottom: 110%;
+        font-size: 12px;
+    }
+
+    .slr-video-container {
+        height: 50vh;
+        margin: 20px 0 30px; /* Adjusted margins */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .slr-input-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Create 2 columns */
+        grid-gap: 10px; /* Add gap between buttons */
+        margin: 5%;
+        padding: 2%;
+    }
+
+    .slr-input-btn {
+        height: 8vh;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .fa {
+        font-size: 28px;
+    }
+
+    /* Adjust tooltip position for mobile */
+    .slr-input-btn::before {
+        bottom: 110%;
+        font-size: 12px;
+    }
+}
+
+/*For workshop only!!!!!*/
+.slr-input-btn:disabled[data-tooltip] {
+    pointer-events: auto; /* Ensures tooltip works even when button is disabled */
+}

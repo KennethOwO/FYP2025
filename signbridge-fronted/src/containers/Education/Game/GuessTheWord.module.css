@@ -1,0 +1,310 @@
+.guess_the_word_layout {
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 70%;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+.guess_the_word_container {
+    width: min(1000px, 100%);
+    margin: 30px auto;
+}
+
+.guess_the_word {
+    font-family: "Russo One", sans-serif;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px #000;
+}
+
+.level_title {
+    font-family: "Russo One", sans-serif;
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+    margin-top: -90px;
+}
+
+.score_title {
+    font-family: "Russo One", sans-serif;
+    font-size: 22.5px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.shared_btn {
+    font-family: "Russo One", sans-serif;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none !important;
+    outline: none !important;
+    font-size: 20px;
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+    border: none;
+    margin: 0 15px 30px;
+    color: #fff !important;
+    border-radius: 8px;
+    border-top: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.shared_btn::before {
+    content: "";
+    height: 10%;
+    position: absolute;
+    width: 40%;
+    background: #fff;
+    right: 13%;
+    top: -3%;
+    border-radius: 99px;
+}
+
+.shared_btn::after {
+    content: "";
+    height: 10%;
+    position: absolute;
+    width: 5%;
+    background: #fff;
+    right: 5%;
+    top: -3%;
+    border-radius: 99px;
+}
+
+.rules_btn {
+    padding: 8px 15px 10px;
+    background: repeating-linear-gradient(45deg, #3ebbf7, #3ebbf7 5px, #45b1f4 5px, #45b1f4 10px);
+    text-shadow: 2px 2px 1px #0066a2, -2px 2px 1px #0066a2, 2px -2px 1px #0066a2, -2px -2px 1px #0066a2, 0px 2px 1px #0066a2, 0px -2px 1px #0066a2, 0px 4px 1px #004a87, 2px 4px 1px #004a87, -2px 4px 1px #004a87;
+    border-bottom: 3px solid rgba(16, 91, 146, 0.5);
+    box-shadow: 0 6px 0 #266b91, 0 8px 1px 1px rgba(0, 0, 0, 0.3), 0 10px 0 5px #12517d, 0 12px 0 5px #1a6b9a, 0 15px 0 5px #0c405e, 0 15px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.rules_btn:hover {
+    top: 2px;
+    box-shadow: 0 4px 0 #266b91, 0 6px 1px 1px rgba(0, 0, 0, 0.3), 0 8px 0 5px #12517d, 0 10px 0 5px #1a6b9a, 0 13px 0 5px #0c405e, 0 13px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.setting_btn {
+    margin: -74px 0 0 0;
+    padding-top: 6px;
+    width: 7%;
+    float: right;
+    background: repeating-linear-gradient(45deg, #9da09e, #9da09e 5px, #858886 5px, #858886 10px);
+    text-shadow: 2px 2px 1px #505251, -2px 2px 1px #505251, 2px -2px 1px #505251, -2px -2px 1px #505251, 0px 2px 1px #505251, 0px -2px 1px #505251, 0px 4px 1px #343534, 2px 4px 1px #343534, -2px 4px 1px #343534;
+    border-bottom: 3px solid rgba(56, 57, 56, 0.5);
+    box-shadow: 0 6px 0 #383938, 0 8px 1px 1px rgba(0, 0, 0, 0.3), 0 10px 0 5px #383938, 0 12px 0 5px #545655, 0 15px 0 5px #202120, 0 15px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.setting_btn:hover {
+    top: 2px;
+    box-shadow: 0 4px 0 #383938, 0 6px 1px 1px rgba(0, 0, 0, 0.3), 0 8px 0 5px #383938, 0 10px 0 5px #545655, 0 13px 0 5px #202120, 0 13px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 13% 0;
+}
+
+.answer_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.answer_option {
+    align-items: center;
+    background-color: #fff4ec;
+    border-radius: 10px;
+    border-width: thin;
+    border-color: rgb(234, 234, 234);
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    color: #36395a;
+    cursor: pointer;
+    font-family: "Russo One", sans-serif;
+    width: 21.8%;
+    height: 100px;
+    justify-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 19px 15px;
+    font-size: 20px;
+}
+
+.answer_option:focus {
+    box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.answer_option:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.answer_option:active {
+    box-shadow: #d6d6e7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.correct_answer {
+    background: linear-gradient(90deg, #76e2a8, #65dc7d);
+}
+
+.wrong_answer {
+    background: linear-gradient(90deg, #ff5656, #e55d5d);
+}
+
+/* Avatar */
+.education_canvas_wrapper {
+    width: 50%;
+    height: 350px;
+}
+
+/* Lives */
+.lives_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+.lives_container img {
+    width: 30px;
+    height: 30px;
+    margin: 0 3px;
+}
+
+@media (max-width: 1000px) {
+    .guess_the_word_layout {
+        height: 135vh;
+    }
+
+    .guess_the_word {
+        width: 95%;
+        margin: auto;
+    }
+
+    .education_canvas_wrapper {
+        width: 50%;
+        height: 300px;
+        margin-bottom: 40px;
+    }
+
+    .answer_option {
+        width: 100%;
+        height: 90px;
+        margin: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .guess_the_word_layout {
+        height: 100vh;
+    }
+
+    .guess_the_word {
+        width: 95%;
+        margin: auto;
+    }
+
+    .level_title {
+        font-size: 35px;
+    }
+
+    .score_title {
+        font-size: 25px;
+    }
+
+    .lives_container img {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px 50px 2px;
+    }
+
+    .answer_option {
+        width: 100%;
+        height: 90px;
+        margin: 8px;
+    }
+
+    .education_canvas_wrapper {
+        width: 50%;
+        height: 270px;
+        margin-bottom: 80px;
+    }
+
+    .shared_btn {
+        font-size: 18px;
+    }
+
+    .setting_btn {
+        margin: -72px 0 0 0;
+        width: 15%;
+    }
+
+    .setting_btn img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .guess_the_word_layout {
+        height: 120vh;
+    }
+
+    .guess_the_word {
+        width: 95%;
+        margin: auto;
+    }
+
+    .level_title {
+        font-size: 30px;
+    }
+
+    .score_title {
+        font-size: 20px;
+    }
+
+    .lives_container img {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px 70px 2px;
+    }
+
+    .answer_option {
+        width: 100%;
+        height: 90px;
+        margin: 8px 0;
+    }
+
+    .education_canvas_wrapper {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 90px;
+    }
+
+    .shared_btn {
+        font-size: 15px;
+    }
+
+    .setting_btn {
+        margin: -54px 0 0 0;
+        width: 15%;
+    }
+
+    .setting_btn img {
+        width: 25px;
+        height: 25px;
+    }
+}

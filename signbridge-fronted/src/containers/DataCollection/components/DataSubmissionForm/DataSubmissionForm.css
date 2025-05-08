@@ -1,0 +1,300 @@
+.dataForm {
+    margin: 30px 0;
+}
+
+.dataForm-header-container {
+    justify-items: center;
+    text-align: center;
+    background-color: #f6f7f9;
+    padding: 50px 22px 40px 22px;
+    border-radius: 8px;
+    width: 80%;
+    margin: auto;
+}
+
+.dataForm-header h1 {
+    font-size: 3rem;
+    font-family: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.dataForm-header p {
+    margin-top: 12px;
+    color: rgb(115, 115, 115);
+    font-family: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif;
+    font-weight: 500;
+}
+
+.dataForm-cover {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+    box-shadow: -5px 3px 10px rgba(0, 0, 0, 0.4);
+    max-width: 80%;
+    text-align: center;
+    width: 65%;
+    margin: auto;
+    margin: 30px auto 50px auto;
+    border-radius: 10px;
+}
+
+.dataForm-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    width: 35%;
+}
+
+.dataForm-card.public {
+    background-color: #dce1ec94;
+}
+
+.dataForm-card.signexpert {
+    background-color: #dce1ec94;
+}
+
+.dataForm-card h1,
+.dataForm-card h3 {
+    color: #363636;
+    margin: 15px 0;
+}
+
+.dataForm-card .dataForm-card-content {
+    margin-top: 20px;
+}
+
+.dataForm-card-info {
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+    margin: 25px 0;
+}
+
+.dataForm-card-info2 {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.dataForm-card-info p,
+.dataForm-card-info2 p {
+    font-size: 1.125rem;
+    max-width: 80%;
+}
+
+.dataForm-container {
+    padding: 10px 30px;
+    background-color: white;
+    width: 65%;
+    border-radius: 10px;
+}
+
+.dataForm-info-block {
+    display: grid;
+}
+
+.dataForm-info {
+    font-size: 2.5rem;
+    justify-self: end;
+    top: 0;
+    right: 0;
+}
+
+.dataForm-container .input-container {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.dataForm-container h1 {
+    display: block;
+    margin: 0 auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* Allow buttons to wrap on smaller screens */
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.video-container {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+    display: flex;
+    padding: 10px;
+}
+
+.video-container .ant-space {
+    margin-top: 8px;
+    margin-left: 20px;
+    max-width: 100%;
+    text-align: left;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.video-container .uploaded-text {
+    color: #0400ff;
+    font-size: 14px;
+}
+
+.video-container .ant-space span:hover svg path {
+    fill: red;
+}
+
+.video-container .ant-space .close-outline-button {
+    cursor: pointer;
+}
+
+.voiceToTextBox {
+    position: relative;
+}
+
+.avatar-microphone-btn {
+    position: absolute;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    right: 7px;
+    bottom: 10px;
+}
+
+.faMicrophone,
+.faStopBtn {
+    font-size: 20px;
+    color: #1c2e4a;
+    background: transparent;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.faMicrophone:hover,
+.faStopBtn:hover {
+    background-color: #e0e0e0;
+}
+
+.avatar-microphone-btn:hover .tooltip2 {
+    visibility: visible;
+}
+/* For devices with a max-width of 480px (small screens) */
+@media (max-width: 480px) {
+    .dataForm-header-container {
+        width: 85%;
+    }
+
+    .dataForm-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .dataForm-header p {
+        font-size: 0.9rem;
+    }
+
+    .dataForm-cover {
+        width: 85%;
+        max-width: 85%;
+    }
+
+    .dataForm-card {
+        width: 100%;
+    }
+
+    .dataForm-container {
+        width: 100%;
+    }
+
+    .dataForm-card.public,
+    .dataForm-card.signexpert {
+        border-radius: 0 10px 0 0;
+    }
+}
+
+/* For devices with a width between 481px and 640px (mobile) */
+@media (min-width: 481px) and (max-width: 640px) {
+    .dataForm-header h1 {
+        font-size: 2.3rem;
+    }
+
+    .dataForm-header p {
+        font-size: 0.9rem;
+    }
+
+    .dataForm-card,
+    .dataForm-container {
+        width: 100%;
+    }
+
+    .dataForm-cover {
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .dataForm-card.public,
+    .dataForm-card.signexpert {
+        border-radius: 0 10px 0 0;
+    }
+}
+
+/* For devices with a width between 641px and 768px (tablets and small devices) */
+@media (min-width: 641px) and (max-width: 768px) {
+    .dataForm-header h1 {
+        font-size: 2rem;
+    }
+
+    .dataForm-header p {
+        font-size: 1rem;
+    }
+
+    .dataForm-card-content {
+        margin-bottom: -30px;
+    }
+
+    .dataForm-card,
+    .dataForm-container {
+        width: 100%;
+    }
+
+    .dataForm-cover {
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .dataForm-card.public,
+    .dataForm-card.signexpert {
+        border-radius: 0 10px 0 0;
+    }
+}
+
+/* For devices with a width between 769px and 1024px (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dataForm-header p {
+        font-size: 1rem;
+    }
+
+    .dataForm-card,
+    .dataForm-container {
+        width: 100%;
+    }
+
+    .dataForm-cover {
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .dataForm-card-content {
+        margin-bottom: -30px;
+    }
+
+    .dataForm-card.public,
+    .dataForm-card.signexpert {
+        border-radius: 0 10px 0 0;
+    }
+}

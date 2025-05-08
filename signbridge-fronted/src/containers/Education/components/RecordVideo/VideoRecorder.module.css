@@ -1,0 +1,265 @@
+.fa_video,
+.fa_play,
+.fa_stop,
+.fa_upload {
+    font-size: 30px;
+    padding: 13px 0;
+}
+
+.open_cam_btn_pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100px;
+    height: 70px;
+}
+
+.open_cam_btn_shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+}
+
+.open_cam_btn_edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left, hsl(340deg 100% 16%) 0%, hsl(340deg 100% 32%) 8%, hsl(340deg 100% 32%) 92%, hsl(340deg 100% 16%) 100%);
+}
+
+.open_cam_btn_front {
+    display: block;
+    position: relative;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    padding: 5px 12px;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.open_cam_btn_pushable:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.open_cam_btn_pushable:hover .open_cam_btn_front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.open_cam_btn_pushable:active .open_cam_btn_front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.open_cam_btn_pushable:hover .open_cam_btn_shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.open_cam_btn_pushable:active .open_cam_btn_shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.open_cam_btn_pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.video_controls {
+    display: flex;
+    justify-content: center;
+}
+
+.video_controls button {
+    position: relative;
+}
+
+.video_player {
+    background-color: #fff7ec;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+.livePlayer {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.recorded_player .recorded {
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.initialHeight {
+    height: 300px;
+}
+
+.upload_btn_pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100px;
+    height: 70px;
+    right: 0;
+}
+
+.upload_btn_shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+}
+
+.upload_btn_edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left, hsl(120deg 100% 14%) 0%, hsl(120deg 100% 25%) 8%, hsl(120deg 100% 25%) 92%, hsl(120deg 100% 14%) 100%);
+}
+
+.upload_btn_front {
+    display: block;
+    position: relative;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    padding: 5px 12px;
+    color: white;
+    background: hsl(120deg 100% 32%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.upload_btn_pushable:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.upload_btn_pushable:hover .upload_btn_front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.upload_btn_pushable:active .upload_btn_front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.upload_btn_pushable:hover .upload_btn_shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.upload_btn_pushable:active .upload_btn_shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.upload_btn_pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+@media (width > 768px) {
+    .mobile_button_group {
+        display: none;
+    }
+
+    .desktop_button_group {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+@media (width < 768px) {
+    .desktop_button_group {
+        display: none;
+    }
+
+    .mobile_button_group {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+.loading_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading_spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+.loading_overlay p {
+    color: white;
+    font-size: 0.8em;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.recorded_player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,108 @@
+/* slrOutput.css */
+
+/* General styling for the output container */
+.slr-output-container {
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    /* Center align the content */
+}
+
+.slr-output-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Styling for the output content */
+.output-content {
+    position: relative;
+    font-size: 1.2em;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    height: calc(100% - 80px);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    padding: 50px 20px 60px 20px;
+    transition: all 0.3s ease;
+}
+
+/* Styling for paragraphs inside output content */
+.output-content p {
+    color: #333;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.output-with-speak {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: inherit;
+}
+
+.avatar-speak-btn {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.avatar-speak-btn:hover {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.avatar-speak-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    position: relative;
+}
+
+.avatar-speak-btn i {
+    font-size: 20px;
+    color: #333;
+}
+
+.avatar-speak-btn .faStopBtn2 {
+    color: #ff4444;
+}
+
+.tooltip2 {
+    visibility: hidden;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.avatar-speak-btn.disabled:hover .tooltip2 {
+    visibility: visible;
+}
