@@ -1,0 +1,205 @@
+.popup-modal {
+    width: 40%;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1001;
+}
+
+.popup-modal.open {
+    display: block;
+}
+
+
+.popup-tick {
+    width: 20%;
+    height: auto;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup-modal h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup-modal p {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.popup-modal button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .popup-tick {
+        width: 40%;
+        margin-top: -40px
+    }
+}
+
+/* For devices with a max-width of 480px (small screens) */
+@media (min-width: 320px) and (max-width: 480px) {
+    .popup-modal {
+        width: 90%;
+        padding: 0 15px 20px;
+    }
+
+    .popup-tick {
+        width: 30%;
+    }
+
+    .popup-modal h2 {
+        font-size: 28px;
+    }
+
+    .popup-modal p {
+        font-size: 16px;
+    }
+
+    .popup-modal button {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+}
+
+/* For devices with a width between 481px and 640px (mobile) */
+@media (min-width: 481px) and (max-width: 640px) {
+    .popup-modal {
+        width: 80%;
+        padding: 0 20px 25px;
+    }
+
+    .popup-tick {
+        width: 25%;
+    }
+
+    .popup-modal h2 {
+        font-size: 32px;
+    }
+
+    .popup-modal p {
+        font-size: 18px;
+    }
+
+    .popup-modal button {
+        font-size: 20px;
+        padding: 9px 0;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .popup-modal {
+        width: 80%;
+        padding: 0 20px 25px;
+    }
+
+    .popup-tick {
+        width: 25%;
+    }
+
+    .popup-modal h2 {
+        font-size: 32px;
+    }
+
+    .popup-modal p {
+        font-size: 18px;
+    }
+
+    .popup-modal button {
+        font-size: 20px;
+        padding: 9px 0;
+    }
+}
+
+/* For devices with a width between 769px and 1024px (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .popup-modal {
+        width: 70%;
+        padding: 0 25px 30px;
+    }
+
+    .popup-tick {
+        width: 20%;
+    }
+
+    .popup-modal h2 {
+        font-size: 34px;
+    }
+
+    .popup-modal p {
+        font-size: 20px;
+    }
+
+    .popup-modal button {
+        font-size: 22px;
+        padding: 10px 0;
+    }
+}
+
+/* For devices with a width between 1025px and 1280px (small desktops) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .popup-modal {
+        width: 50%;
+    }
+
+    .popup-tick {
+        width: 18%;
+    }
+
+    .popup-modal h2 {
+        font-size: 36px;
+    }
+
+    .popup-modal p {
+        font-size: 20px;
+    }
+
+    .popup-modal button {
+        font-size: 24px;
+    }
+}
+
+/* For devices with a width between 1281px and 1440px (small desktops) */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .popup-modal {
+        width: 40%;
+    }
+
+    .popup-tick {
+        width: 15%;
+    }
+
+    .popup-modal h2 {
+        font-size: 38px;
+    }
+
+    .popup-modal p {
+        font-size: 22px;
+    }
+
+    .popup-modal button {
+        font-size: 25px;
+    }
+}

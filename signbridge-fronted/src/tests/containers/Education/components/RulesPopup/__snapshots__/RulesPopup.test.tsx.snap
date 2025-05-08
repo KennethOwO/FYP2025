@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test RulesPopup should render correctly 1`] = `
+<div
+  className="popup_container"
+>
+  <div
+    className="popup_content"
+  >
+    <h3>
+      This is the Rules Popup
+    </h3>
+    <button
+      className="close_btn_pushable"
+      onClick={[Function]}
+      role="button"
+    >
+      <span
+        className="close_btn_shadow"
+      />
+      <span
+        className="close_btn_edge"
+      />
+      <span
+        className="close_btn_front text"
+      >
+        <i
+          className="fa fa-close fa-close-btn"
+        />
+      </span>
+    </button>
+    <div
+      className="popup_details"
+    >
+      <p>
+        • 
+        Rule 1
+      </p>
+      <p>
+        • 
+        Rule 2
+      </p>
+      <p>
+        • 
+        Rule 3
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,50 @@
+[{
+    "keyword": "1",
+    "animations": ["Satu"],
+    "category":"Numbers"
+  },
+  {
+    "keyword": "2",
+    "animations": ["Dua"],
+    "category":"Numbers"
+  },
+  {
+    "keyword": "3",
+    "animations": ["Tiga"],
+    "category":"Numbers"
+  },
+  {
+    "keyword": "4",
+    "animations": ["Empat"],
+    "category":"Numbers"
+  },
+  {
+    "keyword": "5",
+    "animations": ["Lima"],
+    "category":"Numbers"
+  },
+  {
+    "keyword": "6",
+    "animations": ["Enam"],
+    "category":"Numbers"
+  },
+  {
+    "keyword": "7",
+    "animations": ["Tujuh"],
+    "category":"Numbers"
+  },
+  {
+    "keyword": "8",
+    "animations": ["Lapan"],
+    "category":"Numbers"
+  },
+  {
+    "keyword": "9",
+    "animations": ["Sembilan"],
+    "category":"Numbers"
+  },
+  {
+    "keyword": "10",
+    "animations": ["Sepuluh1", "Sepuluh2"],
+    "category":"Numbers"
+  }]

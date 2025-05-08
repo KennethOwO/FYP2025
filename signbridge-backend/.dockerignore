@@ -1,0 +1,14 @@
+node_modules/
+.git/
+README.md
+LICENSE
+.vscode/
+npm-debug.log
+coverage/
+.editorconfig
+dist/
+.DS_Store
+*.log
+.env
+.env.staging
+.env.production

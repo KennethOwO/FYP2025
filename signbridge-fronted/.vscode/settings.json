@@ -1,0 +1,17 @@
+{
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true
+	},
+	"files.autoSave": "afterDelay",
+	"jest.autoRun": "false",
+	"jest.runMode": {
+		"type": "on-demand",
+		"coverage": true
+	},
+	"hide-files.files": ["node_modules", ".vscode", "package-lock.json", "Man.jsx", "README.md", ".gitignore"]
+}

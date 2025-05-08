@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test PopupConfirmation should render correctly 1`] = `
+<div
+  className="popup-confirmation open"
+>
+  <div
+    className="popup-confirmation-content-header"
+  >
+    <h2>
+      insAreYouSure
+    </h2>
+  </div>
+  <div
+    className="popup-confirmation-content"
+  >
+    <div
+      className="popup-confirmation-details"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-175ib4q-MuiPaper-root-MuiTableContainer-root"
+      >
+        <table
+          className="MuiTable-root css-rqglhn-MuiTable-root"
+          role={null}
+        >
+          <tbody
+            className="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+            role={null}
+          >
+            <tr
+              className="MuiTableRow-root css-ys9ggv-MuiTableRow-root"
+              role={null}
+            >
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-r6fuq3-MuiTableCell-root"
+              >
+                <b>
+                  insName
+                </b>
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3urw24-MuiTableCell-root"
+              >
+                John Dope
+              </td>
+            </tr>
+            <tr
+              className="MuiTableRow-root css-2qi3sl-MuiTableRow-root"
+              role={null}
+            >
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-r6fuq3-MuiTableCell-root"
+              >
+                <b>
+                  insEmail
+                </b>
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1vhc2pi-MuiTableCell-root"
+              >
+                JohnDoe@gmail.com
+              </td>
+            </tr>
+            <tr
+              className="MuiTableRow-root css-ys9ggv-MuiTableRow-root"
+              role={null}
+            >
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-r6fuq3-MuiTableCell-root"
+              >
+                <b>
+                  insText
+                </b>
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1vhc2pi-MuiTableCell-root"
+              >
+                This is john doe testing
+              </td>
+            </tr>
+            <tr
+              className="MuiTableRow-root css-1yq2m0q-MuiTableRow-root"
+              role={null}
+            >
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-r6fuq3-MuiTableCell-root"
+              >
+                <b>
+                  insVideo
+                </b>
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1vhc2pi-MuiTableCell-root"
+              >
+                demo-1222222.mp4
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div
+      className="popup-confirmation-content-button"
+    >
+      <button
+        className="btn btn--reset btn--large"
+        data-testid="button-btn--reset"
+        onClick={[MockFunction]}
+        type="button"
+      >
+        cancel_btn
+      </button>
+      <button
+        className="ant-btn css-dev-only-do-not-override-42nv3w ant-btn-default btn-submit btn-large"
+        data-testid="submit_btn2"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          {
+            "fontSize": "20px",
+            "height": "auto",
+            "position": "relative",
+          }
+        }
+        type="button"
+      >
+        <span>
+          submit_btn
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

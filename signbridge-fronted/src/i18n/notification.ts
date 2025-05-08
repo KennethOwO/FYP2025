@@ -1,0 +1,43 @@
+const notification = {
+	en: {
+        notifDeleteSuccess: "Notification deleted successfully!",
+        notifDeleteFailed: "Failed to delete notification.",
+        notifReadSuccess: "Notification marked as read successfully!",
+        notifReadFailed: "Failed to mark notification as read.",
+        notification: "Notification",
+        noNotif: "You don't have any notifications yet.",
+        selectAll: "Select All",
+        delete: "Delete",
+        markAsRead: "Mark as read",
+        filter: "Filter",
+        newTask: "New Task",
+        taskConfirmation: "Task Confirmation",
+        accepted: "Accepted",
+        rejected: "Rejected",
+        newText: "New Text",
+        waitingForVerification: "Waiting for Verification",
+        textVerification: "Text Verification",
+        notifText: "Text: ",
+    },
+    bm: {
+        notifDeleteSuccess: "Pemberitahuan berjaya dipadam!",
+        notifDeleteFailed: "Gagal memadam pemberitahuan.",
+        notifReadSuccess: "Pemberitahuan ditanda sebagai dibaca berjaya!",
+        notification: "Pemberitahuan",
+        noNotif: "Anda tidak mempunyai sebarang pemberitahuan lagi.",
+        selectAll: "Pilih Semua",
+        delete: "Padam",
+        markAsRead: "Tanda sebagai dibaca",
+        filter: "Penapis",
+        newTask: "Tugas Baru",
+        taskConfirmation: "Pengesahan Tugas",
+        accepted: "Diterima",
+        rejected: "Ditolak",
+        newText: "Teks Baru",
+        waitingForVerification: "Menunggu Pengesahan",
+        textVerification: "Pengesahan Teks",
+        notifText: "Teks: ",
+    }
+}
+
+export default notification;

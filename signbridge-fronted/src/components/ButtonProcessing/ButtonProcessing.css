@@ -1,0 +1,22 @@
+.btn-submit {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    background-color: #2ecc71 !important;
+    color: #000;
+}
+
+.btn-submit:hover {
+    color: #fff !important;
+}
+
+.btn-large {
+    padding: 12px 26px;
+    font-size: 20px;
+}

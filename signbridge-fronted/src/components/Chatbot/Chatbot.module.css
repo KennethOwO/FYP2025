@@ -1,0 +1,239 @@
+.circleChatbot {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-image: linear-gradient(#1d58e4, #0c9af3);
+    width: 48px;
+    height: 48px;
+    border-radius: 40%;
+    cursor: pointer;
+    backface-visibility: hidden;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+.PopoverContent {
+    margin: 0 20px 10px 0;
+    border-radius: 15px;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    box-shadow: hsl(206 22% 7% / 20%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+    z-index: 2;
+    position: relative;
+}
+
+.PopoverContent[data-state="open"][data-side="top"] {
+    animation-name: slideDownAndFade;
+}
+
+.PopoverContent[data-state="open"][data-side="right"] {
+    animation-name: slideLeftAndFade;
+}
+
+.PopoverContent[data-state="open"][data-side="bottom"] {
+    animation-name: slideUpAndFade;
+}
+
+.PopoverContent[data-state="open"][data-side="left"] {
+    animation-name: slideRightAndFade;
+}
+
+.headerBar {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 16px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botName {
+    margin: 0;
+    font-size: 20px;
+}
+
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.messageContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.role {
+    font-size: 12px;
+    color: grey;
+}
+
+.userMessage {
+    align-items: flex-end; /* Align user messages to the right */
+    text-align: left;
+}
+
+.botIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+    width: 35px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.botIcon {
+    color: white;
+    width: 17px;
+    height: 17px;
+}
+
+.botMessage {
+    align-items: flex-start; /* Align bot messages to the left */
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.messageContent {
+    max-width: 55%;
+    word-wrap: break-word;
+    margin-top: 4px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    font-size: 14px;
+    width: fit-content;
+}
+
+.userMessage .side .messageContent {
+    margin-left: auto;
+}
+
+.userMessage .side .role {
+    text-align: right;
+}
+
+.side {
+    width: 100%;
+}
+
+.userMessage .messageContent {
+    background-color: #2f65e2;
+    color: white;
+}
+
+.botMessage .messageContent {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.response {
+    flex-grow: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 20px 20px 0px 20px;
+}
+
+.response::-webkit-scrollbar {
+    display: none;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    margin-top: 10px;
+    padding: 0px 20px 20px 20px;
+}
+
+.chatbot_input {
+    flex-grow: 1;
+    padding: 17px 52px 17px 16px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    transition: 0.3s ease;
+}
+
+.chatbot_input:focus {
+    border: 2px solid #1d58e4;
+    outline: none;
+}
+
+.sendBtn {
+    position: absolute;
+    right: 28px;
+    padding: 7px 11px;
+    background-color: #1d58e4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.sendBtn:hover {
+    background-color: #537ae6;
+}
+
+.sendBtn:disabled {
+    background-color: #ccc;
+}
+
+@keyframes slideInFromBottomRight {
+    0% {
+        transform: translate(100%, 100%) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToBottomRight {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100%, 100%) scale(0.9);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .PopoverContent {
+        width: 90vw;
+        margin: 0 20px 10px 0;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .PopoverContent {
+        width: 80vw;
+        max-width: 400px;
+    }
+}

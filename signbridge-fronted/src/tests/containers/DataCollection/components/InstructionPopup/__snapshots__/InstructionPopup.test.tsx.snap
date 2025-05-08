@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test InstructionPopup should render correctly 1`] = `
+<div
+  className="undefined undefined"
+>
+  <div>
+    <h1>
+      instructions
+    </h1>
+    <i
+      className="undefined fa fa-close"
+      data-testid="click-close-btn"
+      onClick={[MockFunction]}
+    />
+  </div>
+  <div>
+    <div>
+      <p>
+        <strong>
+          1.
+        </strong>
+         
+        inslogin
+      </p>
+      <p>
+        <strong>
+          2.
+        </strong>
+         
+        insFillDetails
+      </p>
+      <p>
+        <strong>
+          3.
+        </strong>
+         
+        insUploadDemoVideo
+      </p>
+      <p>
+        <strong>
+          4.
+        </strong>
+         
+        insResetBtn
+      </p>
+    </div>
+    <hr />
+    <div>
+      <p>
+        insNote
+      </p>
+      <div>
+        <ul>
+          <li>
+            insVideoBg
+          </li>
+          <li>
+            insVideoMp4
+          </li>
+          <li>
+            insVideoBody
+          </li>
+          <li>
+            insVideoPurpose
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <p>
+        insReferImage
+      </p>
+      <div>
+        <img
+          alt="instruction-image"
+          src="default"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

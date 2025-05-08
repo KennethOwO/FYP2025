@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test GameOverPopup should render correctly 1`] = `
+<div>
+  <div>
+    <h3>
+      game_over
+    </h3>
+    <div>
+      <p>
+        your_score
+      </p>
+      <p>
+        2
+      </p>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        quit_btn
+      </button>
+    </div>
+  </div>
+</div>
+`;

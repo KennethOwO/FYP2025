@@ -1,0 +1,237 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.accountFormContainer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.accountContent h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.inputGroup {
+    display: flex;
+    gap: 12px;
+}
+
+.label {
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.radioGroup {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.genderLabel {
+    margin-left: -85%;
+    font-size: 13px;
+    color: #2b2b2b;
+}
+
+.gender {
+    width: 22rem;
+    display: flex;
+}
+
+.gender input[type="radio"] {
+    display: none;
+}
+
+/* Style the custom radio buttons */
+.gender input[type="radio"] + label {
+    cursor: pointer;
+    font-size: 16px;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+/* Style for unchecked state */
+.gender input[type="radio"] + label:before {
+    content: "";
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+/* Style for checked state */
+.gender input[type="radio"]:checked + label:before {
+    background-color: #526b94;
+}
+
+.selectContainer {
+    width: 100%;
+}
+
+.selectTrigger {
+    width: 100%;
+    background: none;
+    padding: 0 0 0 1rem;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: inset 0 0 0 2px #efefef;
+    border-radius: 12px;
+    height: 48px;
+    color: #1a1d1f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selectTriggerIcon {
+    cursor: pointer;
+    width: 3rem;
+    transition: all 0.3s ease;
+}
+
+.selectIconFocus {
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+.selectContent {
+    transform: translateY(2px);
+}
+
+.selectPopover {
+    padding: 0.5rem 0;
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 2px #efefef;
+    background-color: white;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.selectItem {
+    text-align: left;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.selectItem:hover {
+    background-color: #f5f5f5;
+}
+
+.selectItem[data-active-item] {
+    background-color: #f5f5f5;
+}
+
+.imageUploader {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.uploadedImage {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.uploadButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.25rem;
+    height: 48px;
+    font-size: 15px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    border: black 1px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.uploadButton:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.submitButton {
+    margin-top: 1rem;
+    justify-self: flex-end;
+    align-self: flex-end;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 48px;
+    font-size: 15px;
+    color: #fcfcfc;
+    background-color: #1a1d1f;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    .accountContent h1 {
+        font-size: 1.5rem;
+    }
+
+    .genderLabel {
+        margin-left: -85%;
+    }
+
+    .gender {
+        width: 12rem;
+    }
+
+    .label {
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .accountFormContainer {
+        padding: 20px;
+    }
+
+    .accountContent h1 {
+        font-size: 1.5rem;
+    }
+
+    .genderLabel {
+        margin-left: -60%;
+        font-size: 14px;
+    }
+
+    .gender {
+        width: 9rem;
+        margin-top: 15px;
+    }
+
+    .gender input[type="radio"] + label {
+        font-size: 12px;
+    }
+
+    .gender input[type="radio"] + label:before {
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+        margin-left: 16px;
+    }
+}

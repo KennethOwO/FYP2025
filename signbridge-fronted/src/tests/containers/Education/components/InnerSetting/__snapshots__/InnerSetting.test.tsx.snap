@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test InnerSetting should render correctly 1`] = `
+<div
+  className="setting-container"
+>
+  <div
+    className="setting-content"
+  >
+    <h3>
+      setting
+    </h3>
+    <button
+      className="close_btn_pushable"
+      onClick={[Function]}
+      role="button"
+    >
+      <span
+        className="close_btn-shadow"
+      />
+      <span
+        className="close_btn_edge"
+      />
+      <span
+        className="close_btn_front text"
+      >
+        <i
+          className="fa fa-close fa-close-btn"
+        />
+      </span>
+    </button>
+    <div
+      className="setting-details"
+    >
+      <h4
+        className="volume-title"
+      >
+        music_volume
+      </h4>
+      <div
+        className="game-volume-bar-container"
+      >
+        <div
+          className="slider-layout"
+        >
+          <i
+            className="fa fa-volume-down"
+          />
+          <div
+            className="volume-slider"
+            id="ambient-volume"
+          />
+          <i
+            className="fa fa-volume-up"
+          />
+        </div>
+        <div
+          className="slider-value-label float-left"
+          id="ambient-volume-label"
+        >
+          100
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

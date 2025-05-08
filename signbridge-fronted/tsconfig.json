@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    // 允许编译 JS/JSX
+  "allowJs": true,
+  // （原有各种选项，不要删掉）
+  "jsx": "react-jsx",
+  "target": "esnext",
+  "module": "esnext",
+  "moduleResolution": "node"
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

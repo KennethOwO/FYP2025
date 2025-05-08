@@ -1,0 +1,443 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test AccountForm should render correctly 1`] = `
+<div>
+  <div>
+    <h1>
+      personalDetail
+    </h1>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="undefined "
+      >
+        <label
+          className="undefined "
+        >
+          accountUsername
+        </label>
+        <input
+          className="undefined "
+          name="username"
+          onChange={[Function]}
+          placeholder=" "
+          type="text"
+          value=""
+        />
+        <div
+          className="undefined "
+        />
+      </div>
+      <div>
+        <div
+          className="undefined "
+        >
+          <label
+            className="undefined "
+          >
+            accountFirstName
+          </label>
+          <input
+            className="undefined "
+            name="firstName"
+            onChange={[Function]}
+            placeholder=" "
+            type="text"
+            value=""
+          />
+          <div
+            className="undefined "
+          />
+        </div>
+        <div
+          className="undefined "
+        >
+          <label
+            className="undefined "
+          >
+            accountLastName
+          </label>
+          <input
+            className="undefined "
+            name="lastName"
+            onChange={[Function]}
+            placeholder=" "
+            type="text"
+            value=""
+          />
+          <div
+            className="undefined "
+          />
+        </div>
+      </div>
+      <div>
+        <div
+          className="undefined "
+        >
+          <label
+            className="undefined "
+          >
+            accountAge
+          </label>
+          <input
+            className="undefined "
+            name="age"
+            onChange={[Function]}
+            placeholder=" "
+            type="text"
+            value=""
+          />
+          <div
+            className="undefined "
+          />
+        </div>
+        <div>
+          <label>
+            accountGender
+          </label>
+          <div>
+            <input
+              checked={false}
+              id="male"
+              name="gender"
+              onChange={[Function]}
+              type="radio"
+              value="male"
+            />
+            <label
+              htmlFor="male"
+            >
+               
+              accountMale
+            </label>
+            <input
+              checked={false}
+              className="female"
+              id="female"
+              name="gender"
+              onChange={[Function]}
+              type="radio"
+              value="female"
+            />
+            <label
+              htmlFor="female"
+            >
+               
+              accountFemale
+            </label>
+          </div>
+        </div>
+      </div>
+      <div
+        className="undefined "
+      >
+        <label
+          className="undefined "
+        >
+          accountRace
+        </label>
+        <input
+          className="undefined "
+          name="race"
+          onChange={[Function]}
+          placeholder=" "
+          type="text"
+          value=""
+        />
+        <div
+          className="undefined "
+        />
+      </div>
+      <div>
+        <div
+          id=":r0:"
+          onClick={[Function]}
+          style={
+            {
+              "cursor": "default",
+            }
+          }
+        >
+          accountCountry
+        </div>
+        <button
+          aria-autocomplete="none"
+          aria-expanded={false}
+          aria-haspopup="listbox"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onClickCapture={[Function]}
+          onFocusCapture={[Function]}
+          onKeyDown={[Function]}
+          onKeyDownCapture={[Function]}
+          onKeyPressCapture={[Function]}
+          onKeyUp={[Function]}
+          onLoadedMetadataCapture={[Function]}
+          onMouseDown={[Function]}
+          onMouseDownCapture={[Function]}
+          role="combobox"
+        >
+          selectCountry
+          <div
+            className="undefined "
+          >
+            <svg
+              fill="none"
+              height="15"
+              viewBox="0 0 15 15"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                fill="currentColor"
+                fillRule="evenodd"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          style={
+            {
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "max-content",
+            }
+          }
+        >
+          <div
+            data-dialog=""
+            data-placing={true}
+            hidden={true}
+            id=":r1:"
+            onBlur={[Function]}
+            onBlurCapture={[Function]}
+            onClickCapture={[Function]}
+            onFocus={[Function]}
+            onFocusCapture={[Function]}
+            onKeyDown={[Function]}
+            onKeyDownCapture={[Function]}
+            onKeyPressCapture={[Function]}
+            onKeyUpCapture={[Function]}
+            onMouseDown={[Function]}
+            onMouseDownCapture={[Function]}
+            role="listbox"
+            style={
+              {
+                "display": "none",
+                "position": "relative",
+              }
+            }
+            tabIndex={-1}
+          />
+        </div>
+      </div>
+      <div>
+        <div
+          id=":r4:"
+          onClick={[Function]}
+          style={
+            {
+              "cursor": "default",
+            }
+          }
+        >
+          accountState
+        </div>
+        <button
+          aria-autocomplete="none"
+          aria-expanded={false}
+          aria-haspopup="listbox"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onClickCapture={[Function]}
+          onFocusCapture={[Function]}
+          onKeyDown={[Function]}
+          onKeyDownCapture={[Function]}
+          onKeyPressCapture={[Function]}
+          onKeyUp={[Function]}
+          onLoadedMetadataCapture={[Function]}
+          onMouseDown={[Function]}
+          onMouseDownCapture={[Function]}
+          role="combobox"
+        >
+          selectState
+          <div
+            className="undefined "
+          >
+            <svg
+              fill="none"
+              height="15"
+              viewBox="0 0 15 15"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                fill="currentColor"
+                fillRule="evenodd"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          style={
+            {
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "max-content",
+            }
+          }
+        >
+          <div
+            data-dialog=""
+            data-placing={true}
+            hidden={true}
+            id=":r5:"
+            onBlur={[Function]}
+            onBlurCapture={[Function]}
+            onClickCapture={[Function]}
+            onFocus={[Function]}
+            onFocusCapture={[Function]}
+            onKeyDown={[Function]}
+            onKeyDownCapture={[Function]}
+            onKeyPressCapture={[Function]}
+            onKeyUpCapture={[Function]}
+            onMouseDown={[Function]}
+            onMouseDownCapture={[Function]}
+            role="listbox"
+            style={
+              {
+                "display": "none",
+                "position": "relative",
+              }
+            }
+            tabIndex={-1}
+          />
+        </div>
+      </div>
+      <div>
+        <div
+          id=":r8:"
+          onClick={[Function]}
+          style={
+            {
+              "cursor": "default",
+            }
+          }
+        >
+          accountCity
+        </div>
+        <button
+          aria-autocomplete="none"
+          aria-expanded={false}
+          aria-haspopup="listbox"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onClickCapture={[Function]}
+          onFocusCapture={[Function]}
+          onKeyDown={[Function]}
+          onKeyDownCapture={[Function]}
+          onKeyPressCapture={[Function]}
+          onKeyUp={[Function]}
+          onLoadedMetadataCapture={[Function]}
+          onMouseDown={[Function]}
+          onMouseDownCapture={[Function]}
+          role="combobox"
+        >
+          selectCity
+          <div
+            className="undefined "
+          >
+            <svg
+              fill="none"
+              height="15"
+              viewBox="0 0 15 15"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                fill="currentColor"
+                fillRule="evenodd"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          style={
+            {
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "max-content",
+            }
+          }
+        >
+          <div
+            data-dialog=""
+            data-placing={true}
+            hidden={true}
+            id=":r9:"
+            onBlur={[Function]}
+            onBlurCapture={[Function]}
+            onClickCapture={[Function]}
+            onFocus={[Function]}
+            onFocusCapture={[Function]}
+            onKeyDown={[Function]}
+            onKeyDownCapture={[Function]}
+            onKeyPressCapture={[Function]}
+            onKeyUpCapture={[Function]}
+            onMouseDown={[Function]}
+            onMouseDownCapture={[Function]}
+            role="listbox"
+            style={
+              {
+                "display": "none",
+                "position": "relative",
+              }
+            }
+            tabIndex={-1}
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          htmlFor="file"
+        >
+          <span>
+            uploadAccImage
+          </span>
+        </label>
+        <label
+          htmlFor="file"
+        >
+          selectAccImage
+          <input
+            accept="image/jpeg, image/png, image/jpg"
+            id="file"
+            onChange={[Function]}
+            style={
+              {
+                "display": "none",
+              }
+            }
+            type="file"
+          />
+        </label>
+      </div>
+      <button
+        type="submit"
+      >
+        submit_btn
+      </button>
+    </form>
+  </div>
+</div>
+`;

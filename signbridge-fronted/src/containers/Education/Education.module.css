@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+.education_layout {
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 70%;
+    background-size: cover;
+    height: calc(100vh - 80px); /* because navbar height is 80px */
+    display: grid;
+    place-items: center;
+    margin-top: -40px;
+}
+
+.education_container {
+    width: min(500px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.education_game_mode {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-image: url("/images/gameWood.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px #000;
+}
+
+.education_game_mode h1 {
+    font-family: "Russo One", sans-serif;
+    font-size: 30px;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border-bottom: #000 2px solid;
+    width: 57%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trophyImg,
+.settingImg {
+    width: 30px;
+    height: 30px;
+}
+
+.game_btn {
+    font-family: "Russo One", sans-serif;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none !important;
+    outline: none !important;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    border: none;
+    color: #fff !important;
+    border-radius: 8px;
+    border-bottom: 3px solid rgba(69, 49, 36, 0.5);
+    border-top: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.game_btn::before {
+    content: "";
+    height: 10%;
+    position: absolute;
+    width: 40%;
+    background: #fff;
+    right: 13%;
+    top: -3%;
+    border-radius: 99px;
+}
+
+.game_btn::after {
+    content: "";
+    height: 10%;
+    position: absolute;
+    width: 5%;
+    background: #fff;
+    right: 5%;
+    top: -3%;
+    border-radius: 99px;
+}
+
+.guess_the_word_btn,
+.do_the_sign_btn {
+    line-height: 1.5em;
+    text-shadow: 2px 2px 1px #553c2c, -2px 2px 1px #553c2c, 2px -2px 1px #553c2c, -2px -2px 1px #553c2c, 0px 2px 1px #553c2c, 0px -2px 1px #553c2c, 0px 4px 1px #453124, 2px 4px 1px #453124, -2px 4px 1px #453124;
+    margin: 15px 15px 30px;
+    background: repeating-linear-gradient(45deg, #90664b, #90664b 5px, #7b5740 5px, #7b5740 10px);
+    width: 65%;
+    padding: 8px 15px 10px;
+    box-shadow: 0 6px 0 #453124, 0 8px 1px 1px rgba(0, 0, 0, 0.3), 0 10px 0 5px #5b402f, 0 12px 0 5px #7b5740, 0 15px 0 5px #3a291e, 0 15px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.guess_the_word_btn:hover,
+.do_the_sign_btn:hover {
+    top: 2px;
+    box-shadow: 0 4px 0 #fbfbfb, 0 6px 1px 1px rgba(0, 0, 0, 0.3), 0 8px 0 5px #5b402f, 0 10px 0 5px #7b5740, 0 13px 0 5px #3a291e, 0 13px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.leaderboard_btn {
+    margin: -70px 0 0 10px;
+    float: left;
+    background: repeating-linear-gradient(45deg, #ff9900, #ff9900 5px, #ff9300 5px, #ff9300 10px);
+    box-shadow: 0 6px 0 #b76113, 0 8px 1px 1px rgba(0, 0, 0, 0.3), 0 10px 0 5px #75421f, 0 12px 0 5px #8a542b, 0 15px 0 5px #593116, 0 15px 1px 6px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid rgba(205, 102, 0, 0.5);
+}
+
+.leaderboard_btn:hover {
+    top: 2px;
+    box-shadow: 0 4px 0 #fbfbfb, 0 6px 1px 1px rgba(0, 0, 0, 0.3), 0 8px 0 5px #75421f, 0 10px 0 5px #8a542b, 0 13px 0 5px #593116, 0 13px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.setting_btn {
+    margin: -70px 10px 0 0;
+    float: right;
+    background: repeating-linear-gradient(45deg, #9da09e, #9da09e 5px, #858886 5px, #858886 10px);
+    box-shadow: 0 5px 0 #383938, 0 7px 1px 1px rgba(0, 0, 0, 0.3), 0 9px 0 5px #383938, 0 11px 0 5px #545655, 0 14px 0 5px #202120, 0 14px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.leaderboard_btn,
+.setting_btn {
+    display: flex;
+    padding: 5px 0;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.setting_btn:hover {
+    top: 2px;
+    box-shadow: 0 4px 0 #fbfbfb, 0 6px 1px 1px rgba(0, 0, 0, 0.3), 0 8px 0 5px #383938, 0 10px 0 5px #545655, 0 13px 0 5px #202120, 0 13px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .education_container {
+        width: min(500px, 95%);
+    }
+
+    .trophyImg,
+    .settingImg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .education_game_mode h1 {
+        font-size: 24px;
+    }
+
+    .game_btn {
+        font-size: 16px;
+    }
+}

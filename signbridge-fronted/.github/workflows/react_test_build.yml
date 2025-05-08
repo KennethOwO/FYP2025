@@ -1,0 +1,35 @@
+name: Test & Build Code
+
+# Controls when the action will run
+on:
+  # Trigger on the events
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: Run npm run build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.11.1"
+
+      - name: Install Dependencies
+        run: npm install
+
+      # - name: Run Jest Tests
+      #   working-directory: ./client
+      #   run: npm run test -- -u
+
+      - name: Build React App
+        run: npm run build

@@ -1,0 +1,29 @@
+.refImage {
+    width: 100%;
+    height: auto;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left
+                bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255, 255, 255, 0.25)));
+    position: relative;
+    z-index: 1;
+}
+
+.references_header_container {
+    position: relative;
+    margin: 30px auto 20px auto;
+    background-color: #fff;
+    padding: 50px 22px 40px 22px;
+    width: 50%;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.references_header_container a {
+    color: #0074ad;
+    font-size: 20px;
+    font-family: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder",
+        sans-serif;
+    font-weight: 500;
+    z-index: 2;
+    margin: 10px;
+}
+

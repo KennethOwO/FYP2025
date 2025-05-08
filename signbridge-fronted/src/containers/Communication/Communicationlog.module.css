@@ -1,0 +1,244 @@
+.logBg {
+    background-color: #ffffff !important;
+}
+
+.logTop {
+    border-radius: 0% 0% 10% 10%;
+    padding: 0 10px 10px 10px; /* Add padding for spacing */
+    text-align: center; /* Center the content */
+    position: relative; /* Ensure positioning context for absolute elements */
+}
+
+.logId {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), -1px -1px 3px rgba(255, 255, 255, 0.7);
+    font-weight: bold; /* Optional: make the log_id bold */
+}
+
+.logHeader {
+    font-size: 18px; /* Increase font size */
+    font-weight: bold; /* Make the font bolder */
+    color: #000000; /* Black text for contrast */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8), /* Subtle light shadow */ -1px -1px 2px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+    letter-spacing: 1px; /* Add letter spacing for emphasis */
+    padding: 10px 0; /* Add vertical padding for more space */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2); /* Light bottom border for definition */
+    margin-top: -8px;
+}
+
+.logItem {
+    transition: none; /* Disable transition animations */
+    pointer-events: none;
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Light border with transparency */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a subtle, shadowy look */
+    padding: 8px; /* Optional: add some padding for better appearance */
+    margin-bottom: 10px; /* Add space between each log item */
+}
+
+.dialogOverlay {
+    background-color: var(--black-a9);
+    position: fixed;
+    inset: 0;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+}
+
+.dialogTitle {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.dialogContent {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 38px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 240px;
+    max-width: calc(100% - 20px);
+    padding: 30px;
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialogDescription {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Yes Button */
+.yesButton {
+    appearance: none;
+    border-radius: 4px;
+    align-items: center;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+    box-sizing: border-box;
+    background-color: #2ecc71;
+    color: #172808;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: 18px;
+    font-weight: 500;
+    height: 48px;
+    letter-spacing: 0.25px;
+    line-height: normal;
+    overflow: visible;
+    padding: 25px 30px;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 2;
+    margin-left: 15px;
+}
+
+.yesButton:not([disabled]):hover {
+    background-color: #2ecc71;
+    color: #fff;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(50, 154, 107, 0.5), 0.125rem 0.125rem 1rem rgba(117, 209, 148, 0.5);
+}
+
+/* No Button */
+.noButton {
+    appearance: none;
+    border-radius: 4px;
+    align-items: center;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+    box-sizing: border-box;
+    background-color: #ff4d4d;
+    color: rgb(82, 1, 1);
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: 18px;
+    font-weight: 500;
+    height: 48px;
+    letter-spacing: 0.25px;
+    line-height: normal;
+    overflow: visible;
+    padding: 25px 30px;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 2;
+    margin-right: 15px;
+}
+
+.noButton:not([disabled]):hover {
+    background-color: #ff4d4d;
+    color: #fff;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(299, 42, 42, 0.5), 0.125rem 0.125rem 1rem rgba(198, 159, 159, 0.5);
+}
+
+.buttonsConfirmation {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.communicationlogBtn {
+    position: fixed;
+    top: 7rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+    z-index: 2;
+    padding: 10px;
+    border: 0;
+    border-radius: 40%;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(#f58b4a, #f7b77e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.communicationlogIcon {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.communicationlogBtn:hover .communicationlogIcon .communicationlogImg {
+    transform: scale(1.2); /* Adjust scale as needed */
+    transition: transform 0.2s ease-in-out; /* This line is redundant but included per your request */
+}
+
+.communicationlogImg {
+    font-size: 2rem !important; /* Adjust the size as needed */
+    color: white;
+}
+
+.closeFa {
+    float: left;
+    margin-left: 0.5vw;
+    font-size: 28px !important;
+    cursor: pointer;
+}
+
+.closeFa:hover {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dltLogBtn {
+    z-index: 1;
+    right: -3vw;
+    margin-bottom: 1vh;
+    bottom: 0;
+    border-radius: 100%;
+    position: fixed;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    color: #fff;
+    background-color: red;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    margin-right: 60px;
+}
+
+.dltLogBtn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 600px) {
+    .communicationlogBtn {
+        top: 16rem;
+        right: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .communicationlogBtn {
+        top: 13rem;
+        right: 1rem;
+    }
+}

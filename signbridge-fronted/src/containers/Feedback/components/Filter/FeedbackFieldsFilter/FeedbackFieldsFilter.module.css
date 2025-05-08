@@ -1,0 +1,32 @@
+.fields_filter {
+    margin: 10px 0 20px 0;
+}
+
+
+.fields_filter .ant-select-selector {
+    border: 1px solid #838383 !important;
+    border-radius: none !important;
+    font-size: 20px;
+    padding: 12px 20px !important;
+}
+
+.fields_filter_dropdown {
+    border-radius: 8px;
+    box-shadow: 5px 10px 14px rgba(0, 0, 0, 0.5);
+}
+
+.fields_filter_dropdown .ant-select-item {
+    padding: 12px 16px;
+    font-size: 20px;
+}
+
+.fields_filter_dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: #007ebd;
+    color: white
+        /* Change this to the desired color */
+}
+
+.fields_filter_dropdown .ant-select-item-option:hover {
+    background-color: #dfdfdf;
+    /* Change this to the desired hover color */
+}

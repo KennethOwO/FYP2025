@@ -1,0 +1,497 @@
+.leaderboard_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.leaderboard_content {
+    max-height: 90vh;
+    height: fit-content;
+    width: 600px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: none;
+    background-image: url("/images/leaderboardBg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 90%;
+}
+
+.box__line {
+    position: absolute;
+    background: rgba(255, 255, 255, 1);
+}
+
+.box__line__top,
+.box__line__bottom {
+    height: 8px;
+    width: 100%;
+}
+
+.box__line__top::before,
+.box__line__bottom::before,
+.box__line__top::after,
+.box__line__bottom::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 1);
+}
+
+.box__line__top {
+    top: -8px;
+}
+
+.box__line__top::before {
+    left: 0;
+    bottom: -8px;
+}
+
+.box__line__top::after {
+    right: 0;
+    bottom: -8px;
+}
+
+.box__line__bottom {
+    bottom: -8px;
+}
+
+.box__line__bottom::before {
+    left: 0;
+    top: -8px;
+}
+
+.box__line__bottom::after {
+    right: 0;
+    top: -8px;
+}
+
+.box__line__left,
+.box__line__right {
+    width: 8px;
+    height: 100%;
+}
+
+.box__line__left {
+    left: -8px;
+}
+
+.box__line__right {
+    right: -8px;
+}
+
+.leaderboard_content h3 {
+    font-family: "Russo One", sans-serif;
+    padding: 20px 20px 10px 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.9em;
+}
+
+.fa_close_btn {
+    font-size: 22px;
+}
+
+.leaderboard_content p {
+    font-family: "Russo One", sans-serif;
+    padding: 0 40px;
+    font-size: 20px;
+}
+
+.close_btn_pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    float: right;
+    cursor: pointer;
+    margin: -50px 20px 20px 20px;
+    width: 40.5px;
+    height: 36px;
+}
+
+.close_btn_shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+}
+
+.close_btn_edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left, hsl(340deg 100% 16%) 0%, hsl(340deg 100% 32%) 8%, hsl(340deg 100% 32%) 92%, hsl(340deg 100% 16%) 100%);
+}
+
+.close_btn_front {
+    display: block;
+    position: relative;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    padding: 5px 12px;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.close_btn_pushable:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.close_btn_pushable:hover .close_btn_front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.close_btn_pushable:active .close_btn_front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.close_btn_pushable:hover .close_btn_shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.close_btn_pushable:active .close_btn_shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.close_btn_pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.tab_buttons {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    padding: 0 50px 0 50px;
+    overflow: hidden;
+}
+
+.tab_buttons button {
+    font-family: "Russo One", sans-serif;
+    width: 50%;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    margin: 0 5px 0 5px;
+    border-radius: 12px;
+}
+
+.tab_buttons button:hover,
+.tab_buttons button.active {
+    color: #6f239c;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tab_buttons button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+    z-index: 0;
+    border-radius: 2px;
+}
+
+.tab_buttons button.active::after,
+.tab_buttons button:hover::after,
+.tab_buttons button:focus::after {
+    width: 90%;
+    left: 5%;
+}
+
+.animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 50%;
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.tab_content {
+    padding: 20px;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.topThreeContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.playerCard {
+    width: 150px;
+    height: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.champion {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.secthird {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 70px;
+}
+
+.playerName {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 8px;
+    color: gold;
+    align-items: center;
+}
+
+.playerScore {
+    font-size: 14px;
+    color: #fff;
+    margin: 4px 0 10px 0;
+}
+
+.rankLabel {
+    position: absolute;
+    top: -10px;
+    left: 20%;
+    transform: translateX(-50%);
+    font-family: "Russo One", sans-serif;
+    font-size: 24px;
+    padding: 2px 6px;
+    border-radius: 8px;
+    z-index: 1;
+    color: gold;
+}
+
+.secondPlace {
+    top: 60px;
+    color: silver;
+}
+
+.thirdPlace {
+    top: 60px;
+    color: #ce8946;
+}
+
+.playerCard {
+    position: relative;
+    text-align: center;
+}
+
+.table_player {
+    margin: 0 40px;
+    max-height: 260px;
+    overflow: auto;
+    position: relative;
+}
+
+.table_player:hover::after {
+    opacity: 1;
+}
+
+.table_player::-webkit-scrollbar {
+    width: 8px;
+    display: none;
+}
+
+.table_player:hover::-webkit-scrollbar {
+    display: block;
+}
+
+.table_player::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.table_player::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.table_row {
+    display: grid;
+    grid-template-columns: 50px 100px 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.alternateRow {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.player_image_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player_profile_picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 480px) {
+    .leaderboard_content p {
+        padding: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    .tab_buttons {
+        padding: 0 10px;
+        height: 5vh;
+    }
+
+    .tab_buttons button {
+        font-size: 0.75rem;
+    }
+
+    .playerCard {
+        width: 100px;
+        height: 210px;
+    }
+
+    .champion,
+    .secthird {
+        width: 60px;
+        height: 60px;
+    }
+
+    .table_row {
+        grid-template-columns: 20px 40px 1fr auto;
+        padding: 13px 8px;
+    }
+
+    .table_player {
+        margin: 0 20px;
+    }
+}
+
+/* Adjust layout based on screen height */
+@media screen and (max-height: 800px) {
+    .leaderboard_content {
+        max-height: 100vh;
+        height: 90vh;
+    }
+
+    .tab_buttons {
+        height: 6vh;
+        padding: 0 30px;
+    }
+
+    .tab_buttons button {
+        font-size: 0.85rem;
+    }
+
+    .playerCard {
+        height: 250px;
+    }
+
+    .champion,
+    .secthird {
+        width: 80px;
+        height: 80px;
+    }
+
+    .table_player {
+        max-height: 230px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .leaderboard_content {
+        max-height: 90vh;
+        height: 90vh;
+    }
+
+    .tab_buttons {
+        height: 5vh;
+        padding: 0 15px;
+    }
+
+    .playerCard {
+        height: 250px;
+    }
+
+    .table_player {
+        max-height: 190px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .leaderboard_content {
+        max-height: 88vh;
+        height: 88vh;
+    }
+
+    .tab_buttons {
+        height: 4vh;
+        padding: 0 10px;
+    }
+
+    .tab_buttons button {
+        font-size: 0.8rem;
+    }
+
+    .playerCard {
+        height: 250px;
+    }
+
+    .table_player {
+        max-height: 140px;
+    }
+}

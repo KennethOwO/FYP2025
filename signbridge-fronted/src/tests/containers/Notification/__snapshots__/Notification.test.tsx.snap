@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Notification should render correctly 1`] = `
+<div>
+  <div>
+    <div>
+      <h1>
+        notification
+      </h1>
+    </div>
+    <div>
+      <div>
+        <div>
+          <p>
+            filter
+          </p>
+        </div>
+        <div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          />
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <span
+              aria-label="selectAll"
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+              data-mui-internal-clone-element="true"
+            >
+              <input
+                class="PrivateSwitchBase-input css-1m9pwf3"
+                data-indeterminate="false"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </span>
+            <div>
+              <i
+                aria-label="delete"
+                class="fa-regular fa-trash-can"
+                data-mui-internal-clone-element="true"
+              />
+            </div>
+            <div>
+              <i
+                aria-label="markAsRead"
+                class="fa-regular fa-envelope-open"
+                data-mui-internal-clone-element="true"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>
+            noNotif
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

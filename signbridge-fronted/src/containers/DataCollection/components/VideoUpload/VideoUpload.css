@@ -1,0 +1,7 @@
+/* On smaller screens, hide the text and show only the icon */
+@media (max-width: 560px) {
+    .video-upload-button-text .upload-button-text {
+        display: none !important;
+    }
+
+}
