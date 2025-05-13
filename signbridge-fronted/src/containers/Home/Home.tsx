@@ -72,7 +72,7 @@ export default function HomepageSection() {
 
         if (isAutoPlaying) {
             slideInterval = setInterval(() => {
-                setCurrentSlide((prevSlide) => 
+                setCurrentSlide((prevSlide) =>
                     prevSlide === imageSlider.length - 1 ? 0 : prevSlide + 1
                 );
             }, 3000); // Change slide every 3 seconds
@@ -90,7 +90,7 @@ export default function HomepageSection() {
     const handleDotClick = (index: number) => {
         setCurrentSlide(index);
         setIsAutoPlaying(false); // Optionally pause auto-play when user manually changes slides
-        
+
         // Optionally restart auto-play after a delay
         setTimeout(() => setIsAutoPlaying(true), 3000);
     };
@@ -151,10 +151,10 @@ export default function HomepageSection() {
                         {imageSlider.filter((slide) => slide.status === "Shown").length > 0 ? (
                             <div className={style.slider}>
                                 {imageSlider.map((slide, index) => (
-                                    <img 
+                                    <img
                                         key={slide.sequence}
-                                        src={slide.image as string} 
-                                        alt={`Slide ${slide.sequence}`} 
+                                        src={slide.image as string}
+                                        alt={`Slide ${slide.sequence}`}
                                         className={`${style.slider_image} ${index === currentSlide ? style.active : ''}`}
                                     />
                                 ))}
@@ -164,9 +164,9 @@ export default function HomepageSection() {
                                             .filter((slide) => slide.status === "Shown")
                                             .sort((a, b) => a.sequence - b.sequence)
                                             .map((slide, index) => (
-                                                <span 
-                                                    key={slide.sequence} 
-                                                    className={index === currentSlide ? `${style.dot} ${style.active}` : style.dot} 
+                                                <span
+                                                    key={slide.sequence}
+                                                    className={index === currentSlide ? `${style.dot} ${style.active}` : style.dot}
                                                     onClick={() => handleDotClick(index)}
                                                 />
                                             ))
@@ -209,16 +209,9 @@ export default function HomepageSection() {
                                     ))}
                         </div>
                     </section>
-                    
-                    {/* New Deaf Mode Section */}
-                    <motion.section
-                        className={style.deaf_mode_section}
-                        id="deaf_mode_section"
-                        initial={{ opacity: 0 }}
-                        transition={{ duration: 1 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true, amount: 0.25 }}
-                    >
+
+                    {/* Deaf Mode Section */}
+                    <section className={style.available_module_section} id="deaf_mode_section">
                         <h1 className={style.heading} style={{ background: secondaryColor }}>
                             {lang === "en" ? (
                                 <>
@@ -230,7 +223,7 @@ export default function HomepageSection() {
                                 </>
                             )}
                         </h1>
-                        <div className={`${style.deaf_mode_container}`}>
+                        <div className={`${style.available_module_container}`}>
                             <Link to="/deaf-mode" className={style.module_link}>
                                 <motion.div
                                     className={`${style.avail_module_box}`}
@@ -240,7 +233,8 @@ export default function HomepageSection() {
                                     viewport={{ once: true, amount: 0.5 }}
                                 >
                                     <div className={style.avail_module_image}>
-                                        <img src="/path/to/deaf-mode-icon.png" alt={lang === "en" ? "Deaf Mode" : "Mod Pekak"} />
+                                        <img src="/images/DeafMode-Image/deafmode.png" alt={lang === "en" ? "Deaf Mode" : "Mod Pekak"}
+                                            className={style.deaf_mode_image} />
                                         <div className={style.avail_module_text}>
                                             <span className={style.cart_btn}>
                                                 {lang === "en" ? "Deaf Mode" : "Mod Pekak"}
@@ -250,7 +244,7 @@ export default function HomepageSection() {
                                 </motion.div>
                             </Link>
                         </div>
-                    </motion.section>
+                    </section>
 
                     {/* For the about section */}
                     <motion.section className={style.about} id="about" initial={{ opacity: 0 }} transition={{ duration: 1 }} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: 0.25 }}>
@@ -292,8 +286,8 @@ export default function HomepageSection() {
                                     </div>
                                 ))}{" "}
                     </motion.section>
-                    
-                    
+
+
 
                     {/* Location Section */}
                     <motion.section className={`${style.location}`} initial={{ opacity: 0 }} transition={{ duration: 1 }} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: 0.25 }}>

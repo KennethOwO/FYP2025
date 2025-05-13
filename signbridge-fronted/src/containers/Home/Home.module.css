@@ -336,3 +336,12 @@ iframe {
         font-size: 15px;
     }
 }
+
+.deaf_mode_image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    /* Adjust this value as needed */
+    margin: 0 auto;
+    display: block;
+}
