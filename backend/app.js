@@ -11,6 +11,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const { MongoClient } = require("mongodb");
 const path = require("path");
+const rateLimit = require("express-rate-limit");
 
 const app = express();
 const port = process.env.PORT;
@@ -18,6 +19,20 @@ const dbName = process.env.DATABASE_NAME;
 const dbUrl = process.env.DATABASE_URL;
 const client = new MongoClient(dbUrl);
 const database = client.db(dbName);
+const mongoSanitize = require("express-mongo-sanitize");
+
+
+app.use(express.json());
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // max 100 requests per IP
+  message: {
+    status: 429,
+    error: "Too many requests. Please try again later.",
+  },
+});
+app.use(limiter);
 
 // const options = {
 //     key: fs.readFileSync(path.join(__dirname, 'config', '192.168.1.5-key.pem')),
@@ -25,6 +40,11 @@ const database = client.db(dbName);
 // };
 
 const allowedOrigins = process.env.ALLOWED_ORIGINS.split(",");
+
+app.get('/test', (req, res) => {
+  res.json({ message: "Test route OK" });
+});
+
 
 // Middleware
 app.use(
@@ -62,18 +82,23 @@ app.use((req, res, next) => {
 });
 
 app.use(
-    helmet.contentSecurityPolicy({
-        directives: {
-            defaultSrc: ["'self'"],
-            connectSrc: ["'self'", process.env.FRONTEND_URL],
-            frameSrc: ["'self'", process.env.FRONTEND_URL],
-            imgSrc: ["'self'", "data:", "blob:", "https:"],
-            scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
-            styleSrc: ["'self'", "'unsafe-inline'"],
-            fontSrc: ["'self'", "data:", "https:"],
-        },
-    })
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      connectSrc: ["'self'", process.env.FRONTEND_URL],
+      frameSrc: ["'self'"],
+      imgSrc: ["'self'", "data:", "blob:", "https:"],
+      scriptSrc: ["'self'"], // Remove 'unsafe-inline' if possible
+      styleSrc: ["'self'", "'unsafe-inline'"], // Optional: OK for Tailwind/dev
+      fontSrc: ["'self'", "https:", "data:"],
+      objectSrc: ["'none'"],
+      baseUri: ["'self'"],
+      formAction: ["'self'"],
+      upgradeInsecureRequests: [],
+    },
+  })
 );
+
 
 // setting "X-Frame-Options" to "DENY"
 app.use(helmet.frameguard({ action: "deny" }));
@@ -116,6 +141,9 @@ app.use(categorySignRoutes);
 const communicationRoutes = require("./routes/CommunicationRoutes");
 app.use(communicationRoutes);
 
+const slrRoutes = require("./routes/SLRRoutes");
+app.use("/api/slr", slrRoutes);
+
 const slpRoutes = require("./routes/SLPRoutes");
 app.use("/api/slp", slpRoutes);
 
@@ -132,6 +160,12 @@ app.use(formRoutes);
 
 const edithomepageRoutes = require("./routes/EditHomepageRoutes");
 app.use(edithomepageRoutes);
+
+app.use(mongoSanitize({
+  onSanitize: ({ req, key }) => {
+    console.warn(`🛡️ MongoDB injection attempt detected and removed: ${key}`);
+  }
+}));
 
 // const CsrfTokenRoutes = require("./routes/CsrfTokenRoutes");
 // app.use(CsrfTokenRoutes);

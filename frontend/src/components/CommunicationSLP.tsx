@@ -10,6 +10,8 @@ interface Frame {
     frame_index?: number;
 }
 
+
+
 const posePairs = [
     [1, 8], [1, 2], [2, 3], [3, 4],
     [1, 5], [5, 6], [6, 7],
@@ -74,6 +76,7 @@ const CommunicationSLP: React.FC = () => {
         setCurrentFrameIndex(0);
     };
 
+    
     useEffect(() => {
         if (frames.length === 0) return;
         const interval = setInterval(() => {
@@ -81,29 +84,51 @@ const CommunicationSLP: React.FC = () => {
         }, 40);
         return () => clearInterval(interval);
     }, [frames]);
+    
+    const handleReset = () => {
+    setInputText("");
+    setMatchedGlosses([]);
+    setFrames([]);
+    setCurrentFrameIndex(0);
+    };
+
 
     return (
+        <div className={styles.containerwrapper}>
         <div className={styles.container}>
-            <form onSubmit={handleSubmit}>
-                <textarea
-                    value={inputText}
-                    onChange={(e) => setInputText(e.target.value)}
-                    placeholder="Input text"
-                    className={styles.textarea}
-                />
-                <Button type="submit" variant="contained">
-                    Match & Play
-                </Button>
-            </form>
-
-            {matchedGlosses.length > 0 && (
-                <p>Gloss Matched: {matchedGlosses.join(", ")}</p>
-            )}
-
-            <div className={styles.canvas} id="slp-canvas">
-                <SLPFrameRenderer frame={frames[currentFrameIndex]} />
+        <div className={styles.contentwrapper}>
+        <form onSubmit={handleSubmit} className={styles.form}>
+            <textarea
+            value={inputText}
+            onChange={(e) => setInputText(e.target.value)}
+            placeholder="Enter your sentence here..."
+            className={styles.textarea}
+            rows={3}
+            />
+            <div className={styles.buttonArea}>
+            <Button type="submit" variant="contained" className={styles.playButton}>
+            Match & Play
+            </Button>
+             <Button type="button" variant="outlined" className={styles.resetButton} onClick={handleReset}>
+            Reset
+            </Button>
             </div>
+        </form>
+
+        {matchedGlosses.length > 0 && (
+            <p className={styles.matchedGlosses}>
+            Gloss Matched: {matchedGlosses.join(", ")}
+            </p>
+        )}
         </div>
+
+        
+        <div className={styles.contentwrapper} id="slp-canvas">
+            <SLPFrameRenderer frame={frames[currentFrameIndex]} />
+        </div>
+        </div>
+        </div>
+
     );
 };
 
@@ -187,6 +212,7 @@ const SLPFrameRenderer: React.FC<{ frame: Frame }> = ({ frame }) => {
             }
         });
     }, [frame]);
+    
 
     return <canvas ref={canvasRef} width={640} height={480} className={styles.canvasElement} />;
 };

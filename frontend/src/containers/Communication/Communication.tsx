@@ -1,8 +1,8 @@
-// Communication.jsx
+// Communication.tsx
 // General Imports
 import "regenerator-runtime/runtime";
 import styles from "./Communication.module.css";
-import { useRef, useState, useEffect, SetStateAction } from "react";
+import { useRef, useState, useEffect, SetStateAction, FormEvent, ChangeEvent } from "react";
 import { fetchNLPOutput, createLogsByUser } from "../../services/communication.service";
 
 // SLP Imports
@@ -15,7 +15,6 @@ import React from "react";
 import Communicationlog from "./Communicationlog";
 // SLR Imports
 import SLRInput from "../../components/SLRInput/SLRInput";
-// import SLROutput from "../../components/SLROutput/SLROutput";
 import CommunicationSLP from "../../components/CommunicationSLP.tsx";
 import ButtonRow from "../../components/ButtonRow/ButtonRow";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
@@ -24,17 +23,64 @@ import { useTranslation } from "react-i18next";
 import { getAuth } from "firebase/auth";
 import { useUserStore } from "@root/store/userStore";
 import { FaCog } from "react-icons/fa";
+import axios from "axios"; // Add axios for API calls
+import api from '../../api';
 
-function Communication() {
+// TypeScript interfaces
+interface LogData {
+    text: string;
+    module: string;
+    user_id: string;
+}
+
+interface ModelConfig {
+    path: string;
+    confidenceThreshold: number;
+}
+
+function Communication(): JSX.Element {
     const currentUser = getAuth().currentUser;
     const { user } = useUserStore();
     const { t, i18n } = useTranslation();
-    const [isListening, setIsListening] = useState(false);
+    const [isListening, setIsListening] = useState<boolean>(false);
     const { transcript, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition({});
     const formRef = useRef<HTMLFormElement>(null);
 
-    const renderMicrophoneButton = () => {
-        const handleStopListening = () => {
+    // States to manage the application
+    // General states
+    const [activeButton, setActiveButton] = useState<string>(() => {
+        // Retrieve the activeButton value from localStorage on initial render
+        return localStorage.getItem("activeButton") || "SLP";
+    });
+
+    // Model status for YOLO integration
+    const [modelStatus, setModelStatus] = useState<"initializing" | "ready" | "error">("initializing");
+    const [modelFeedback, setModelFeedback] = useState<string>("");
+    const [processingVideo, setProcessingVideo] = useState<boolean>(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+    const streamRef = useRef<MediaStream | null>(null);
+    const chunksRef = useRef<Blob[]>([]);
+    const [videoSource, setVideoSource] = useState<string | null>(null);
+    const [isRecording, setIsRecording] = useState<boolean>(false);
+
+    // Initialize YOLO model on component mount for SLR
+    useEffect(() => {
+        if (activeButton === "SLR") {
+            initializePoseFormerModel();
+        }
+
+        // Cleanup on unmount
+        return () => {
+            if (streamRef.current) {
+                const tracks = streamRef.current.getTracks();
+                tracks.forEach(track => track.stop());
+            }
+        };
+    }, [activeButton]);
+
+    const renderMicrophoneButton = (): JSX.Element => {
+        const handleStopListening = (): void => {
             SpeechRecognition.stopListening();
             setIsListening(false);
             toast(t("stopped"), {
@@ -46,7 +92,7 @@ function Communication() {
                 },
             });
 
-            triggerSubmit(); // Call the new helper function to submit without an event
+            triggerSubmit(); // Call the helper function to submit without an event
         };
 
         if (browserSupportsSpeechRecognition) {
@@ -90,26 +136,26 @@ function Communication() {
     };
 
     // Helper function to trigger form submission without an event parameter
-    const triggerSubmit = () => {
+    const triggerSubmit = (): void => {
         if (formRef.current) {
             formRef.current.requestSubmit(); // Trigger form submission using the form reference
         }
     };
 
-    const [customTranscript, setCustomTranscript] = useState("");
+    const [customTranscript, setCustomTranscript] = useState<string>("");
 
     useEffect(() => {
-        setCustomTranscript(transcript);
+        setCustomTranscript(transcript || "");
     }, [transcript]);
 
     // Define a variable to store the previous submitted text
     let previousSubmittedText = "";
-    // @ts-ignore
-    const handleSubmit = async (event) => {
+
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
         event.preventDefault();
         setIsLoading(true); // Start loading
-        // @ts-ignore
-        const formData = new FormData(formRef.current); // Use formRef for data extraction
+
+        const formData = new FormData(formRef.current as HTMLFormElement);
         let submittedText = (formData.get("sigmlUrl") as string) || ""; // Prevent null value
         const getData = {
             submitted_Text: submittedText,
@@ -120,15 +166,15 @@ function Communication() {
             const data = await response;
 
             if (previousSubmittedText === submittedText) {
-                // If the current submitted text is the same as the previous one, append "#" to the returned text
+                // If the current submitted text is the same as the previous one, append "+" to the returned text
                 setInputText(data["return"] + "+");
             } else {
                 // If they are different, update the inputText directly
                 setInputText(data["return"]);
-                const logData = {
+                const logData: LogData = {
                     text: data["return"],
                     module: "SLP",
-                    user_id: user?.user_id || "",
+                    user_id: user?.user_id ? String(user.user_id) : "",
                 };
                 if (currentUser) createLogsByUser(logData, currentUser);
             }
@@ -143,85 +189,83 @@ function Communication() {
         }
     };
 
-    // States to manage the application
-    // General states
-    const [activeButton, setActiveButton] = useState(() => {
-        // Retrieve the activeButton value from localStorage on initial Frender
-        return localStorage.getItem("activeButton") || "SLP";
-    });
-
     // SLP states
-    const [inputText, setInputText] = useState(""); // State to hold the input text
-    const [speed, setSpeed] = useState(1); // State to hold the speed value
-    const [handFocus, setHandFocus] = useState(false); // State to manage hand focus mode
-    const [showSkeleton, setShowSkeleton] = useState(false); // State to manage skeleton visibility
-    const [currentAnimationName, setCurrentAnimationName] = useState(""); // State to hold the current animation name
-    const [currentSignFrame, setCurrentSignFrame] = useState("Sign / Frame : 0 / 90"); // State to hold the current animation name
-    const [isPaused, setPaused] = useState(false); // State to manage pause/play
-    // const [leftHandedMode, setLeftHandedMode] = useState(false); // State to manage left-handed mode
-    const [currentStatus, setCurrentStatus] = useState(""); // State to hold the current animation name
+    const [inputText, setInputText] = useState<string>(""); // State to hold the input text
+    const [speed, setSpeed] = useState<number>(1); // State to hold the speed value
+    const [handFocus, setHandFocus] = useState<boolean>(false); // State to manage hand focus mode
+    const [showSkeleton, setShowSkeleton] = useState<boolean>(false); // State to manage skeleton visibility
+    const [currentAnimationName, setCurrentAnimationName] = useState<string>(""); // State to hold the current animation name
+    const [currentSignFrame, setCurrentSignFrame] = useState<string>("Sign / Frame : 0 / 90"); // State to hold the current animation name
+    const [isPaused, setPaused] = useState<boolean>(false); // State to manage pause/play
+    const [currentStatus, setCurrentStatus] = useState<string>(""); // State to hold the current animation name
     // SLR states
     const [SLRResponse, setSLRResponse] = useState<string>("");
+    const [detectionTime, setDetectionTime] = useState<Date | null>(null);
 
     //////////////////////////////////////////
     // General functions
 
-    // @ts-ignore
-    const handleButtonValue = (event) => {
-        const { value } = event.target;
+    const handleButtonValue = (event: React.MouseEvent<HTMLButtonElement>): void => {
+        const target = event.target as HTMLButtonElement;
+        const value = target.value;
         setActiveButton(value);
         localStorage.setItem("activeButton", value); // Save the activeButton value to localStorage
 
         // Clear SLR state when switching tabs
         if (value === "SLP") {
             setSLRResponse("");
+            setDetectionTime(null);
             handleSLRReset();
+
+            // Stop any active camera streams
+            if (streamRef.current) {
+                const tracks = streamRef.current.getTracks();
+                tracks.forEach(track => track.stop());
+                streamRef.current = null;
+            }
+
+            // Reset video-related states
+            setVideoSource(null);
+            setIsRecording(false);
+        } else if (value === "SLR") {
+            // Initialize model when switching to SLR tab
+            initializePoseFormerModel();
         }
     };
 
-    const sliderStyle = {
+    const sliderStyle: React.CSSProperties = {
         "--slider-value": speed,
     } as React.CSSProperties;
 
-    // @ts-ignore
-    const isButtonActive = (buttonValue) => {
+    const isButtonActive = (buttonValue: string): boolean => {
         return activeButton === buttonValue;
     };
 
     //////////////////////////////////////////
     // SLP functions
 
-    // @ts-ignore
-    const updateCurrentAnimationName = (animationName) => {
+    const updateCurrentAnimationName = (animationName: string): void => {
         setCurrentAnimationName(animationName);
     };
 
-    // @ts-ignore
-    const updateCurrentSignFrame = (signFrame) => {
+    const updateCurrentSignFrame = (signFrame: string): void => {
         setCurrentSignFrame(signFrame);
     };
 
-    // @ts-ignore
-    const updateStatus = (status) => {
+    const updateStatus = (status: string): void => {
         setCurrentStatus(status);
     };
 
-    // @ts-ignore
-    const handleSpeedChange = (event) => {
-        const newSpeed = parseFloat(event.target.value);
+    const handleSpeedChange = (event: Event, newValue: number | number[]): void => {
+        const newSpeed = newValue as number;
         setSpeed(newSpeed);
     };
 
-    // // Function to toggle left-handed mode
-    // const toggleLeftHandedMode = () => {
-    //     setLeftHandedMode((prevMode) => !prevMode);
-    // };
-
-    const togglePause = () => {
+    const togglePause = (): void => {
         setPaused((prevState) => !prevState);
     };
 
-    function HandFocusMode() {
+    function HandFocusMode(): null {
         const { camera } = useThree();
         const x = -35; // Adjust these values according to your requirements
         const y = 150;
@@ -229,41 +273,295 @@ function Communication() {
         const decimal = 1; // Adjust this value to control the speed of lerping
 
         useFrame(() => {
-            camera.position.lerp({ x, y, z }, decimal);
+            camera.position.lerp({ x, y, z } as any, decimal);
             camera.lookAt(x, y, z);
         });
 
         return null;
     }
 
-    const controls = useRef();
-
-    // @ts-ignore
+    const controls = useRef<any>();
 
     //////////////////////////////////////////
-    // SLR functions
-    const handleSLRResponse = (data: string) => {
+    // Enhanced SLR functions
+
+    // Handle file selection for SLR
+    const handleFileSelect = (event: ChangeEvent<HTMLInputElement>): void => {
+        const files = event.target.files;
+        if (!files || files.length === 0) return;
+
+        const file = files[0];
+
+        // Check if file is a video
+        if (!file.type.startsWith('video/')) {
+            setModelFeedback('Please select a video file');
+            return;
+        }
+
+        // Stop any active camera stream
+        if (streamRef.current) {
+            const tracks = streamRef.current.getTracks();
+            tracks.forEach(track => track.stop());
+            streamRef.current = null;
+        }
+
+        // Reset recording state
+        setIsRecording(false);
+
+        setVideoSource(URL.createObjectURL(file));
+        setModelFeedback(`File selected: ${file.name}`);
+    };
+
+    // Start webcam recording
+    const startRecording = async (): Promise<void> => {
+        try {
+            // Reset existing recording data
+            if (mediaRecorderRef.current && mediaRecorderRef.current.state === "recording") {
+                mediaRecorderRef.current.stop();
+            }
+
+            // Stop any existing stream first
+            if (streamRef.current) {
+                const tracks = streamRef.current.getTracks();
+                tracks.forEach(track => track.stop());
+            }
+
+            // Clear any existing video source
+            setVideoSource(null);
+            setSLRResponse("");
+            setDetectionTime(null);
+
+            const stream = await navigator.mediaDevices.getUserMedia({
+                video: { width: 640, height: 480 },
+                audio: false
+            });
+
+            streamRef.current = stream;
+            if (videoRef.current) {
+                videoRef.current.srcObject = stream;
+            }
+
+            const mediaRecorder = new MediaRecorder(stream);
+            mediaRecorderRef.current = mediaRecorder;
+
+            mediaRecorder.ondataavailable = (event: BlobEvent): void => {
+                if (event.data.size > 0) {
+                    chunksRef.current.push(event.data);
+                }
+            };
+
+            mediaRecorder.onstop = (): void => {
+                const blob = new Blob(chunksRef.current, { type: 'video/mp4' });
+                chunksRef.current = [];
+                setVideoSource(URL.createObjectURL(blob));
+                processVideo(blob);
+            };
+
+            chunksRef.current = [];
+            mediaRecorder.start();
+            setIsRecording(true);
+            setModelFeedback('Recording started... Make sign gestures clearly');
+
+        } catch (error) {
+            console.error('Error accessing camera:', error);
+            setModelFeedback(`Error accessing camera: ${error instanceof Error ? error.message : String(error)}`);
+            setIsRecording(false);
+        }
+    };
+
+    // Stop webcam recording
+    const stopRecording = (): void => {
+        if (mediaRecorderRef.current && mediaRecorderRef.current.state === "recording") {
+            mediaRecorderRef.current.stop();
+            setIsRecording(false);
+            setModelFeedback('Recording stopped. Processing video...');
+        }
+    };
+
+    // In Communication.tsx - update or add these functions
+
+    // Initialize PoseFormer model
+    const initializePoseFormerModel = async (): Promise<void> => {
+        try {
+            setModelStatus("initializing");
+            setModelFeedback("Initializing PoseFormer model...");
+
+            const response = await api.post('/api/slr/initialize-model', {
+                modelPath: "models/best.pt",
+                confidenceThreshold: 0.7
+            });
+
+            if (response.data.success) {
+                setModelStatus("ready");
+                setModelFeedback("Model initialized successfully");
+            } else {
+                setModelStatus("error");
+                setModelFeedback(`Error initializing model: ${response.data.error}`);
+            }
+        } catch (error) {
+            console.error('Error initializing model:', error);
+            setModelStatus("error");
+            setModelFeedback(`Error initializing model: ${error instanceof Error ? error.message : String(error)}`);
+        }
+    };
+
+    // Process video with PoseFormer model
+    const processVideo = async (videoBlob: Blob): Promise<void> => {
+        if (modelStatus !== "ready") {
+            setModelFeedback('Model is not ready. Please wait or reload the page.');
+            return;
+        }
+
+        try {
+            setProcessingVideo(true);
+            setModelFeedback('Processing video with PoseFormer model...');
+
+            // Create form data to send video
+            const formData = new FormData();
+            formData.append('video', videoBlob);
+
+            const modelConfig: ModelConfig = {
+                path: "models/best.pt",
+                confidenceThreshold: 0.5
+            };
+
+            formData.append('modelConfig', JSON.stringify(modelConfig));
+
+            // Send to backend API for processing
+            const response = await api.post('/api/slr/process-video', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+
+            if (response.data.success) {
+                setSLRResponse(response.data.text);
+                setDetectionTime(new Date());
+
+                // Log the detected sign
+                const logData: LogData = {
+                    text: response.data.text,
+                    module: "SLR",
+                    user_id: user?.user_id ? String(user.user_id) : "",
+                };
+                if (currentUser) createLogsByUser(logData, currentUser);
+
+                setModelFeedback('Processing complete');
+            } else {
+                setModelFeedback(`Error processing video: ${response.data.error}`);
+            }
+        } catch (error) {
+            console.error('Error processing video:', error);
+            setModelFeedback(`Error processing video: ${error instanceof Error ? error.message : String(error)}`);
+        } finally {
+            setProcessingVideo(false);
+        }
+    };
+    // Reset video state
+    const handleVideoReset = (): void => {
+        setVideoSource(null);
+        setSLRResponse("");
+        setDetectionTime(null);
+        setModelFeedback("");
+
+        // Stop any active camera stream
+        if (streamRef.current) {
+            const tracks = streamRef.current.getTracks();
+            tracks.forEach(track => track.stop());
+            streamRef.current = null;
+        }
+
+        // Reset recording state
+        setIsRecording(false);
+
+        if (videoRef.current) {
+            videoRef.current.srcObject = null;
+        }
+    };
+
+    const handleSLRResponse = (data: string): void => {
         setSLRResponse(data);
-        const logData = {
+        setDetectionTime(new Date());
+
+        const logData: LogData = {
             text: data,
             module: "SLR",
-            user_id: user?.user_id || "",
+            user_id: user?.user_id ? String(user.user_id) : "",
         };
         if (currentUser) createLogsByUser(logData, currentUser);
     };
 
     // Add reset handler
-    const handleSLRReset = () => {
+    const handleSLRReset = (): void => {
         setSLRResponse("");
+        setDetectionTime(null);
     };
 
-    const [showSettingsPopup, setShowSettingsPopup] = useState(false);
+    const [showSettingsPopup, setShowSettingsPopup] = useState<boolean>(false);
 
-    const toggleSettingsPopup = () => {
+    const toggleSettingsPopup = (): void => {
         setShowSettingsPopup(!showSettingsPopup);
     };
 
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+
+    // Render status indicator based on model status
+    const renderStatusIndicator = (): JSX.Element => {
+        const statusClasses = {
+            initializing: styles["status-initializing"],
+            ready: styles["status-ready"],
+            error: styles["status-error"]
+        };
+
+        const statusMessages = {
+            initializing: 'Initializing...',
+            ready: 'Model Ready',
+            error: 'Model Error'
+        };
+
+        return (
+            <div className={styles["status-indicator"] + " " + statusClasses[modelStatus]}>
+                {modelStatus === 'initializing' && (
+                    <div className={styles["loading-spinner"]}></div>
+                )}
+                <span>{statusMessages[modelStatus]}</span>
+            </div>
+        );
+    };
+
+    // Add this function inside your Communication component, alongside your other functions
+    const testSlrEndpoint = async (): Promise<void> => {
+        try {
+            console.log("Testing SLR endpoint...");
+
+            const response = await fetch('/api/slr/initialize-model', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    modelPath: 'best.pt',
+                    confidenceThreshold: 0.7
+                }),
+            });
+
+            console.log("Response status:", response.status);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('SLR initialize response:', data);
+
+            // Show success in the UI
+            setModelFeedback('SLR endpoint test successful!');
+
+        } catch (error) {
+            console.error('SLR test error:', error);
+            setModelFeedback(`SLR test error: ${error instanceof Error ? error.message : String(error)}`);
+        }
+  };
 
     return (
         <div className={styles["communication-body"]}>
@@ -282,93 +580,160 @@ function Communication() {
                     <>
                         <div className={styles["slr-container"]}>
                             <div className={styles["slr-content-wrapper"]}>
-                                <SLRInput onResponsiveReceived={handleSLRResponse} onReset={handleSLRReset} />
+                                <div className={styles["slr-header"]}>
+                                    <h3>{t("video_input")}</h3>
+                                    {renderStatusIndicator()}
+                                </div>
+
+                                {/* Video preview area */}
+                                <div className={styles["video-container"]}>
+                                    {videoSource ? (
+                                        <video
+                                            ref={videoRef}
+                                            src={videoSource}
+                                            controls
+                                            className={styles["video-preview"]}
+                                        />
+                                    ) : (
+                                        <video
+                                            ref={videoRef}
+                                            className={styles["video-preview"]}
+                                            autoPlay
+                                            muted
+                                            playsInline
+                                        />
+                                    )}
+                                </div>
+
+                                {/* Model info */}
+                                <div className={styles["model-info"]}>
+                                    <div className={styles["model-details"]}>
+                                        <span className={styles["model-name"]}>Model: PoseFormer Recognition (best.pt)</span>
+                                    </div>
+
+                                    {modelFeedback && (
+                                        <div className={styles["feedback-message"]}>
+                                            {processingVideo ? (
+                                                <>
+                                                    <div className={styles["processing-spinner"]}></div>
+                                                    <span>{modelFeedback}</span>
+                                                </>
+                                            ) : (
+                                                <span>{modelFeedback}</span>
+                                            )}
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Action buttons */}
+                                <div className={styles["action-buttons"]}>
+                                    <div className={styles["file-input-wrapper"]}>
+                                        <button
+                                            className={styles["action-button"] + " " + styles["file-button"]}
+                                            disabled={isRecording || processingVideo}
+                                            type="button"
+                                        >
+                                            <i className="fa fa-file"></i>
+                                            <span>{t("select_file")}</span>
+                                        </button>
+                                        {/* <label htmlFor="videoUpload">Upload video</label> */}
+                                        <input
+                                            id="videoUpload"
+                                            type="file"
+                                            accept="video/*"
+                                            onChange={handleFileSelect}
+                                            className={styles["file-input"]}
+                                            disabled={isRecording || processingVideo}
+                                        />
+
+                                        <button
+                                            className={styles["action-button"] + " " + (isRecording ? styles["stop-button"] : styles["record-button"])}
+                                            onClick={isRecording ? stopRecording : startRecording}
+                                            disabled={processingVideo}
+                                            type="button"
+                                        >
+                                            <i className={`fa ${isRecording ? "fa-stop" : "fa-video-camera"}`}></i>
+                                            <span>{isRecording ? t("stop_recording") : t("record")}</span>
+                                        </button>
+                                    </div>
+
+                                    
+                                    <div className={styles["file-input-wrapper"]}>
+                                        <button
+                                            className={styles["action-button"] + " " + styles["process-button"]}
+                                            onClick={() => {
+                                                if (videoSource) {
+                                                    fetch(videoSource)
+                                                        .then(response => response.blob())
+                                                        .then(blob => processVideo(blob));
+                                                }
+                                            }}
+                                            disabled={processingVideo || !videoSource || modelStatus !== "ready"}
+                                            type="button"
+                                        >
+                                            <i className="fa fa-cogs"></i>
+                                            <span>{processingVideo ? t("processing") : t("process")}</span>
+                                        </button>
+                                        
+                                        <button
+                                            className={styles["action-button"] + " " + styles["reset-button"]}
+                                            onClick={handleVideoReset}
+                                            disabled={processingVideo || (!videoSource && !streamRef.current)}
+                                            type="button"
+                                        >
+                                            <i className="fa fa-refresh"></i>
+                                            <span>{t("reset")}</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
                             </div>
+
                             <div className={styles["slr-content-wrapper"]}>
-                                {/* <SLROutput responseData={SLRResponse} /> */}
+                                <h3>{t("detected_sign")}</h3>
+                                <div className={styles["detected-output"]}>
+                                    {SLRResponse ? (
+                                        <div className={styles["detected-text"]}>
+                                            <div className={styles["detection-result"]}>{SLRResponse}</div>
+                                            {detectionTime && (
+                                                <div className={styles["detection-time"]}>
+                                                    {detectionTime.toLocaleTimeString()}
+                                                </div>
+                                            )}
+                                        </div>
+                                    ) : (
+                                        <div className={styles["no-detection"]}>
+                                            {t("waiting_for_sign")}
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         </div>
+
                         {user && currentUser ? (
-                            <div>
-                                <Communicationlog userId={user.user_id || ""} moduleType={"SLR"} />
+                            <div className={styles["history-section"]}>
+                                <Communicationlog userId={user.user_id ? String(user.user_id) : ""} moduleType={"SLR"} />
                             </div>
-                        ) : (
-                            <a></a>
-                        )}
+                        ) : null}
                     </>
                 )}
             </div>
             {activeButton === "SLP" && (
                 <>
                     {user && currentUser ? (
-                        <div>
-                            <Communicationlog userId={user.user_id || ""} moduleType={"SLP"} />
+                        <div className={styles["history-section"]}>
+                            <Communicationlog userId={user.user_id ? String(user.user_id) : ""} moduleType={"SLP"} />
                         </div>
-                    ) : (
-                        <a></a>
-                    )}
-
-                    <div className={styles["contentContainer"]}>
-                        <div className={styles["contentWrapper"]}>
-                            <div className={styles["canvasBgWrapper"]}>
-                                {/* <div className={styles["circleBg"]}></div>
-                                <div className={styles["rectangleOverlay"]}>
-                                    <ButtonRow isPaused={isPaused} togglePause={togglePause} renderMicrophoneButton={renderMicrophoneButton} setCustomTranscript={setCustomTranscript} />
-                                    <div className={styles["textInputWrapper"]}>
-                                        <form ref={formRef} onSubmit={handleSubmit} className={styles["voice-form"]}>
-                                            <textarea value={customTranscript} onChange={(e) => setCustomTranscript(e.target.value)} className={styles["avatar-textbox"]} id="sigmlUrl" name="sigmlUrl" placeholder={t("enter_text_here")} spellCheck="true"></textarea>
-                                            <button className={styles["avatarplay-btn"]} type="submit">
-                                                {t("play")}
-                                            </button>
-                                        </form>
-                                    </div>
-                                </div> */}
-                                <input className={styles["gloss-box"]} type="text" placeholder={t("gloss")} value={currentAnimationName} readOnly />
-                                <CommunicationSLP />
-                            </div>
-
-                            {/* <button className={styles.settingsButton} onClick={toggleSettingsPopup}>
-                                <FaCog className={styles["settingsIcon"]} />
-                            </button> */}
-
-                            {showSettingsPopup && (
-                                <>
-                                    {/* <div className={styles.overlay} onClick={toggleSettingsPopup}></div>
-                                    <div className={styles.settingsPopup}>
-                                        <h2>
-                                            {t("setting")}
-                                            <button className={styles.closeButton} onClick={toggleSettingsPopup} aria-label="Close settings">
-                                                ×
-                                            </button>
-                                        </h2>
-                                        <div className={styles["speed-control-wrapper"]} style={sliderStyle}>
-                                            <span className={styles["speed-span"]}>{t("speed")} : </span>
-                                            <Slider className={styles["speed-slider"]} min={0.2} max={2} step={0.2} value={speed} onChange={handleSpeedChange} aria-labelledby="speed-slider" />
-                                            <span className={styles["speed-value"]}>{speed}</span>
-                                        </div>
-
-                                        <FormControlLabel className={styles["custom-checkbox-label"]} control={<Checkbox checked={showSkeleton} onChange={() => setShowSkeleton((prevState) => !prevState)} color="primary" inputProps={{ "aria-label": "Show Skeleton" }} />} label={showSkeleton ? t("hide_skeleton") : t("show_skeleton")} />
-                                    </div> */}
-                                </>
-                            )}
-
-                            {/* <div className={`${styles["helperBox"]} ${styles["controlBox"]}`}>
-                                <h2>{t("setting")}</h2>
-                                <div className={styles["speed-control-wrapper"]} style={sliderStyle}>
-                                    <span className={styles["speed-span"]}>{t("speed")} : </span>
-                                    <Slider className={styles["speed-slider"]} min={0.2} max={2} step={0.2} value={speed} onChange={handleSpeedChange} aria-labelledby="speed-slider" />
-                                    <span className={styles["speed-value"]}>{speed}</span>
-                                </div> */}
-
-                                {/* Show/Hide Skeleton */}
-                                {/* <FormControlLabel className={styles["custom-checkbox-label"]} control={<Checkbox checked={showSkeleton} onChange={() => setShowSkeleton((prevState) => !prevState)} color="primary" inputProps={{ "aria-label": "Show Skeleton" }} />} label={showSkeleton ? t("hide_skeleton") : t("show_skeleton")} />
-                            </div>
-                            <div className={`${styles["helperBox"]} ${styles["disclaimerBox"]}`}>
-                                <img className={styles["infoIcon"]} src="./images/info.png" />
-                                <span className={styles["disclaimerText"]}>{t("sign_disclaimer")}</span>
-                            </div> */}
-                        </div> 
-                    </div>
+                    ) : null}
+            
+                    {/* <div className={styles["contentContainer"]}>
+                        <div className={styles["contentWrapper"]}> */}
+                            {/* <div className={styles["canvasBgWrapper"]}> */}
+                            <CommunicationSLP />
+                            {/* </div> */}
+                        {/* </div>
+                    </div> */}
                 </>
             )}
         </div>

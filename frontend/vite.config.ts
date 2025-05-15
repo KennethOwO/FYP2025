@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
-// import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react";
 import path from "path";
 // import mkcert from 'vite-plugin-mkcert'; // ADD THIS
 
 export default defineConfig({
-  // plugins: [react(), mkcert()], // ADD mkcert to plugins
+  plugins: [react()], // ADD mkcert to plugins
   resolve: {
     alias: {
       "@root": path.resolve(__dirname, "src"),
