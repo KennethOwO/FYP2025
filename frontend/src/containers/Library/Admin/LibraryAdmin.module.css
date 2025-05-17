@@ -707,3 +707,20 @@
 .back_to_top_button:hover {
     background-color: #333333;
 }
+
+.searchBarContainer1 {
+    padding-left: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* add space below search bar */
+    width: 100%;
+    margin-left: 140px;
+}
+
+@media (max-width: 768px) {
+    .searchBarContainer1 {
+        padding-left: 16px;
+        margin-bottom: 20px;
+        /* maintain spacing on small screens */
+    }
+}

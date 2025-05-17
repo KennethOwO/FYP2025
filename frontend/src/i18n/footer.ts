@@ -15,7 +15,7 @@ const footer = {
         communication: "Communication",
         education: "Education",
         social_media: "Social Media",
-        copyright: "© CopyRight reserved by SIGN BRIDGE 2024",
+        copyright: "© CopyRight reserved by SIGN BRIDGE 2025",
         references: "References",
     },
     bm: {
@@ -34,7 +34,7 @@ const footer = {
         communication: "Komunikasi",
         education: "Pendidikan",
         social_media: "Media Sosial",
-        copyright: "© Hak Cipta terpelihara oleh SIGN BRIDGE 2024",
+        copyright: "© Hak Cipta terpelihara oleh SIGN BRIDGE 2025",
         references: "Rujukan",
     },
 };
